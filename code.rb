@@ -18,7 +18,7 @@ bot.command :rnumber do |event, min, max|
   rand(min.to_i .. max.to_i)
 end
 
-bot.command(:servreg, chain_usable: false, description: "Gets the region the server is stationed in.") do
+bot.command(:servreg, chain_usable: false, description: "Gets the region the Discord server is stationed in.") do
   event.server.region
 end
 
@@ -32,14 +32,13 @@ end
 
 bot.command(:help, chain_usable: false) do |event|
   event << ' Here are all of my commands'
-  event << ' ^servreg Shows where the Discord server is stationed
+  event << ' ^servreg Shows where the Discord server is stationed'
   event << ' ^rnumber Gives you a random number. Syntax: ^rnumber "number" "other number"'
   event << ' ^help Shows this obviously'
   event << ' ^ping Used to show response time'
   event << ' ^invite Gives you a link to invite me'
   event << ' ^shutdown Shuts me down  only Cah can use this command'
   event << ' ^donate Want to donate? That's great! This command gives you a link for PayPal donations'
-
 end
 
 bot.run
