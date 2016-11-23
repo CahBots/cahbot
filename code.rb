@@ -27,18 +27,18 @@ bot.command(:invite, chain_usable: false) do |event|
 end
 
 bot.command(:donate, chain_usable: false) do |event|
-  bot.send_message(event.channel.id 'Donating? Click here: http://bit.ly/2gzJpnq'
+  bot.send_message(event.channel.id 'Donating? Click here, http://bit.ly/2gzJpnq'
 end
 
 bot.command(:help, chain_usable: false) do |event|
   event << ' Hello, welcome to the  help command , here are all commands'
-  event << ' ^servreg:  Shows where the Discord server is stationed
-  event << ' ^rnumber:  Gives you a random number. Syntax: ^rnumber "number" "other number"'
-  event << ' ^help:  Shows this, duh'
-  event << ' ^ping: Used to show response time'
-  event << ' ^invite  Gives you a link to invite me'
-  event << ' ^shutdown  Shuts me down, only Cah can use this command'
-  event << ' ^donate  Want to donate? That's great! This command gives you a link for PayPal donations'
+  event << ' ^servreg, Shows where the Discord server is stationed
+  event << ' ^rnumber, Gives you a random number. Syntax: ^rnumber "number" "other number"'
+  event << ' ^help, Shows this, duh'
+  event << ' ^ping, Used to show response time'
+  event << ' ^invite, Gives you a link to invite me'
+  event << ' ^shutdown, Shuts me down, only Cah can use this command'
+  event << ' ^donate, Want to donate? That's great! This command gives you a link for PayPal donations'
 end
 
 bot.run
