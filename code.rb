@@ -31,14 +31,15 @@ bot.command(:donate, chain_usable: false) do |event|
 end
 
 bot.command(:help, chain_usable: false) do |event|
-  event << ' Hello and welcome to the  help command. Here are all commands'
+  event << ' Here are all of my commands'
   event << ' ^servreg Shows where the Discord server is stationed
   event << ' ^rnumber Gives you a random number. Syntax: ^rnumber "number" "other number"'
-  event << ' ^help Shows this  duh'
+  event << ' ^help Shows this obviously'
   event << ' ^ping Used to show response time'
   event << ' ^invite Gives you a link to invite me'
   event << ' ^shutdown Shuts me down  only Cah can use this command'
   event << ' ^donate Want to donate? That's great! This command gives you a link for PayPal donations'
+
 end
 
 bot.run
