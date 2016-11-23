@@ -28,6 +28,7 @@ end
 
 bot.command(:donate, chain_usable: false) do |event|
   bot.send_message(event.channel.id 'Donating? Click here  http://bit.ly/2gzJpnq'
+  exit
 end
 
 bot.command(:help, chain_usable: false) do |event|
