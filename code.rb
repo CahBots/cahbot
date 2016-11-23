@@ -9,6 +9,13 @@ bot.command(:shutdown, help_available: false) do |event|
   exit
 end
 
+
+bot.command :ping do |event|
+  m = event.respond('Pong!')
+  m.edit "Pong! Time taken: #{Time.now - event.timestamp} seconds."
+end
+
+
 bot.command :rnumber do |event, min, max|
   rand(min.to_i .. max.to_i)
 end
