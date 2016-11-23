@@ -22,8 +22,8 @@ bot.command(:invite, chain_usable: false) do |event|
   event.bot.invite_url
 end
 
-bot.command :donate do |event|
-  bot.send_message(event.channel.id 'Donating? Click here  http://bit.ly/2gzJpnq')
+bot.message(with_text: "^donate") do |event|
+  event.respond "Hi, #{event.user.name}, click here for donations: http://bit.ly/2gmWLAx!"
 end
 
 bot.command(:help, chain_usable: false) do |event|
