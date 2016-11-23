@@ -14,7 +14,7 @@ bot.command :ping do |event|
   m.edit "Pong! Time taken: #{Time.now - event.timestamp} seconds."
 end
 
-bot.command :rnumber do |event  min  max|
+bot.command :rnumber do |event, min, max|
   rand(min.to_i .. max.to_i)
 end
 
@@ -31,7 +31,7 @@ bot.command(:donate, chain_usable: false) do |event|
 end
 
 bot.command(:help, chain_usable: false) do |event|
-  event << ' Hello and welcome to the  help command   here are all commands'
+  event << ' Hello and welcome to the  help command. Here are all commands'
   event << ' ^servreg Shows where the Discord server is stationed
   event << ' ^rnumber Gives you a random number. Syntax: ^rnumber "number" "other number"'
   event << ' ^help Shows this  duh'
