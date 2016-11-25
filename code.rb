@@ -2,6 +2,18 @@ require 'discordrb'
 
 bot = Discordrb::Commands::CommandBot.new token: 'MjQ5MjY4MzkzODE3OTMxNzc2.CxPvrg.q-NUnZK5BDt1htnOyV__02XSReg',  client_id: 249268393817931776, prefix: '^'
 
+bot.game='Use ^help for commands!'
+
+bot.command(:eval, help_available: false) do |event, *code|
+  break unless event.user.id == 228290433057292288
+
+  begin
+    eval code.join(' ')
+  rescue
+    'An error occurred when doing that'
+  end
+end
+
 bot.command(:shutdown,  help_available: false) do |event|
   break unless event.user.id == 228290433057292288
 
