@@ -2,8 +2,6 @@ require 'discordrb'
 
 bot = Discordrb::Commands::CommandBot.new token: 'MjQ5MjY4MzkzODE3OTMxNzc2.CxPvrg.q-NUnZK5BDt1htnOyV__02XSReg',  client_id: 249268393817931776, prefix: '^'
 
-bot.game='Use ^help for commands!'
-
 bot.command(:eval, help_available: false) do |event, *code|
   break unless event.user.id == 228290433057292288
 
@@ -48,4 +46,6 @@ bot.command(:help, chain_usable: false) do |event|
   event << ' ^donate: Want to donate? That\'s great! This command gives you a link for PayPal donations'
 end
 
-bot.run
+bot.run :async
+
+bot.game='Use ^help for commands!'
