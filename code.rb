@@ -43,7 +43,7 @@ bot.command(:help, chain_usable: false) do |event|
   event << ' ^ping: Used to show response time'
   event << ' ^invite: Gives you a link to invite me to your own server!'
   event << ' ^shutdown: Shuts me down, only Cah can use this command'
-  event << ' ^eval: It's a secret to everyone (except Cah, of course)'
+  event << ' ^eval: It\'s a secret to everyone (except Cah, of course)'
   event << ' ^donate: Want to donate? That\'s great! This command gives you a link for PayPal donations'
 end
 
