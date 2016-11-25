@@ -2,6 +2,13 @@ require 'discordrb'
 
 bot = Discordrb::Commands::CommandBot.new token: 'MjQ5MjY4MzkzODE3OTMxNzc2.CxPvrg.q-NUnZK5BDt1htnOyV__02XSReg',  client_id: 249268393817931776, prefix: '^'
 
+bot.command(:exit, help_available: false) do |event|
+  break unless event.user.id == 228290433057292288
+
+  bot.send_message(event.channel.id, 'Cah Bot is shutting down')
+  exit
+end
+
 bot.command(:eval, help_available: false) do |event, *code|
   break unless event.user.id == 228290433057292288
 
@@ -10,13 +17,6 @@ bot.command(:eval, help_available: false) do |event, *code|
   rescue
     'An error occurred when doing that'
   end
-end
-
-bot.command(:shutdown,  help_available: false) do |event|
-  break unless event.user.id == 228290433057292288
-
-  bot.send_message(event.channel.id  'Cah has turned off Cah Bot')
-  exit
 end
 
 bot.command :ping do |event|
@@ -43,9 +43,10 @@ bot.command(:help, chain_usable: false) do |event|
   event << ' ^ping: Used to show response time'
   event << ' ^invite: Gives you a link to invite me to your own server!'
   event << ' ^shutdown: Shuts me down, only Cah can use this command'
+  event << ' ^eval: It's a secret to everyone (except Cah, of course)'
   event << ' ^donate: Want to donate? That\'s great! This command gives you a link for PayPal donations'
 end
 
 bot.run :async
 
-bot.game='Use ^help for commands!'
+bot.game='Use ^help for stuff!'
