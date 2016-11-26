@@ -24,6 +24,10 @@ bot.command :ping do |event|
   m.edit "Pong! Time taken: #{Time.now - event.timestamp} seconds."
 end
 
+bot.command :about do |event|
+  m = event.respond('Hello, I am Cah Bot, a small Discord bot with loads of potential. To learn more, or to tell me that I suck at bot creation, go here: https://discord.gg/zAbWXfe'
+end
+
 bot.command :rnumber do |event, min, max|
   rand(min.to_i .. max.to_i)
 end
