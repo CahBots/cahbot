@@ -24,8 +24,8 @@ bot.command :ping do |event|
   m.edit "Pong! Time taken: #{Time.now - event.timestamp} seconds."
 end
 
-bot.command :about do |event|
-  event.respond('Hello, I am Cah Bot, a small Discord bot with loads of potential. To learn more, or to tell me that I suck at bot creation, go here: https://discord.gg/zAbWXfe)'
+bot.message(with_text: "^about") do |event|
+  event.respond "Hello, I am Cah Bot, a small Discord bot with loads of potential. To learn more, or to tell me that I suck at bot creation, go here: https://discord.gg/zAbWXfe"
 end
 
 bot.command :rnumber do |event, min, max|
