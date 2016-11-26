@@ -47,6 +47,4 @@ bot.command(:help, chain_usable: false) do |event|
   event << ' ^donate: Want to donate? That\'s great! This command gives you a link for PayPal donations'
 end
 
-bot.run :async
-
-bot.game='Use ^help for stuff!'
+bot.run
