@@ -24,7 +24,7 @@ bot.command :ping do |event|
   m.edit "Pong! Hey, that took: #{Time.now - event.timestamp} seconds to do."
 end
 
-bot.commandd(:about, help_available: false) do |event|
+bot.command(:about, help_available: false) do |event|
   event.respond "Hello, I am Cah Bot, a small Discord bot with loads of potential. To learn more, or to tell me that I suck at bot creation, go here: https://discord.gg/zAbWXfe"
 end
 
