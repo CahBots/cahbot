@@ -68,6 +68,7 @@ end
 
 bot.command(:help, chain_usable: false) do |event|
   event << ' Here are all of my commands for you to use!'
+  event << ' ^about: Shows you some info about CB, or something'
   event << ' ^rnumber <Number> <Other Number>: Gives you a random number'
   event << ' ^help: Shows this, obviously'
   event << ' ^ping: Used to show response time'
