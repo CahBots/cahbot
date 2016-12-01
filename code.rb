@@ -24,6 +24,11 @@ bot.command :ping do |event|
   m.edit "Hey, that took #{((Time.now - event.timestamp) * 1000).to_i}ms."
 end
 
+bot.command(:roll, description: 'Does something like rolling a dice!') do |event|
+      h = event.respond '**Rolling Dice!**'
+      h.edit "I rolled you a #{rand(1..6)}!"
+end
+
 bot.command(:about, help_available: false) do |event|
   event.respond "Hello, I am Cah Bot, a small Discord bot with loads of potential. To learn more, or to tell me that I suck at bot creation, go here: https://discord.gg/zAbWXfe"
 end
