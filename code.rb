@@ -37,8 +37,7 @@ bot.command(:invite, chain_usable: false) do |event|
 end
 
 bot.command(:say, help_available: false, required_permissions: [:manage_messages]) do |_event, *args|
- event.channel.prune(2)
-  event << "#{args.join(' ')}"
+  "#{args.join(' ')}"
 end
 
 bot.command(:update, help_available: false) do |event|
