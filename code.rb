@@ -21,7 +21,7 @@ end
 
 bot.command :ping do |event|
   m = event.respond('Pong!')
-  m.edit "Pong! Hey, that took: #{Time.now - event.timestamp} seconds to do."
+  m.edit "Hey, that took #{((Time.now - event.timestamp) * 1000).to_i}ms."
 end
 
 bot.command(:about, help_available: false) do |event|
@@ -39,8 +39,10 @@ end
 bot.command(:update, help_available: false) do |event|
   event << ' **Latest CahBot Update**'
   event << ''
-  event << 'Made sure all the commands were actual commands, and added the "^who" commands'
-  event << 'That\'s about all'
+  event << 'Oh noes! Development has completely halted for a while. Why? Well, here\'s the thing...'
+  event << '**I have no idea what I\'m doing right now** and my bot kinda sucks rn lol'
+  event << 'However, CB wil continue to be online (mostly) 24/7, I just need to learn "the ropes" first.'
+  event << 'I thank you for your patience'
 end
 
 bot.command(:who, help_available: false) do |event|
