@@ -36,8 +36,8 @@ bot.command(:invite, chain_usable: false) do |event|
   event.respond "To invite me to your server, head over here: #{event.bot.invite_url}"
 end
 
-bot.command(:say, help_available: false, description: "Makes the bot say stupid things!", required_permissions: [:manage_messages]) do |_event, *args|
- event.channel.prune(1)
+bot.command(:say, help_available: false, required_permissions: [:manage_messages]) do |_event, *args|
+ event.channel.prune(2)
   event << "#{args.join(' ')}"
 end
 
@@ -85,6 +85,7 @@ bot.command(:help, chain_usable: false) do |event|
   event << ' ^donate: Want to donate? That\'s great! This command gives you a link for PayPal donations'
   event << ' ^update: Gives you the latest CB update'
   event << ' ^who: Gives you a stupid long story of how this came to be'
+  event << ' ^say: Makes CB say something, you need the manage messages perm tho'
 end
 
 bot.run
