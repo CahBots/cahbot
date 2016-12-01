@@ -83,7 +83,6 @@ bot.command(:help, chain_usable: false) do |event|
   event << ' ^eval: Like you don\'t know what eval commands do'
   event << ' ^donate: Want to donate? That\'s great! This command gives you a link for PayPal donations'
   event << ' ^update: Gives you the latest CB update'
-  event << ' ^who: Gives you a stupid long story of how this came to be'
   event << ' ^say: Makes CB say something, you need the manage messages perm tho'
 end
 
