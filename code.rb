@@ -36,6 +36,11 @@ bot.command(:invite, chain_usable: false) do |event|
   event.respond "To invite me to your server, head over here: #{event.bot.invite_url}"
 end
 
+bot.command(:say, help_available: false, description: "Makes the bot say stupid things!", required_permissions: [:manage_messages]) do |_event, *args|
+ event.channel.prune(1)
+  event << "#{args.join(' ')}"
+end
+
 bot.command(:update, help_available: false) do |event|
   event << ' **Latest CahBot Update**'
   event << ''
