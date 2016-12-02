@@ -40,6 +40,7 @@ end
 
 bot.message(with_text: '@Cah Bot prefix') do |event|
   event.respond "Hey, I'm Cah Bot, my prefix is `^`. To see all commands, use `^help`"
+end
 
 bot.command :rnumber do |event, min, max|
   rand(min.to_i .. max.to_i)
