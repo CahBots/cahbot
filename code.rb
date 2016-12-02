@@ -38,8 +38,8 @@ bot.command(:about, help_available: false) do |event|
   event << '**How\'s it going?** Good'
 end
 
-bot.message(with_text: "@Cah Bot prefix") do |event|
-  event.respond "Hey, I'm Cah Bot, my prefix is `^`. To see all commands, use `^help`"
+bot.message(with_text: 'CB prefix') do |event|
+  event.respond "My prefix is `^`. To see all commands, use `^help`"
 end
 
 bot.command :rnumber do |event, min, max|
@@ -69,7 +69,7 @@ end
 
 bot.command(:help, chain_usable: false) do |event|
   event << ' Here are all of my commands for you to use!'
-  event << ' (upon bot mention) reminds you the prefix'
+  event << ' (upon saying "CB prefix") reminds you the prefix'
   event << ' ^about: Shows you some info about CB, or something'
   event << ' ^rnumber <Number> <Other Number>: Gives you a random number'
   event << ' ^help: Shows this, obviously'
