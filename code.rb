@@ -48,30 +48,14 @@ end
 bot.command(:update, help_available: false) do |event|
   event << ' **Latest CahBot Update**'
   event << ''
-  event << 'Oh noes! Development has completely halted for a while. Why? Well, here\'s the thing...'
-  event << '**I have no idea what I\'m doing right now** and my bot kinda sucks rn lol'
-  event << 'However, CB wil continue to be online (mostly) 24/7, I just need to learn "the ropes" first.'
-  event << 'I thank you for your patience'
+  event << 'Okay, I\'m on a half-break right now, but...'
+  event << 'Added ^roll.'
+  event << 'Added a bot mention event, shows you the prefix'
+  event << 'Eyy, we have a new """staff""" member, say hello to him!'
 end
 
-bot.command(:who, help_available: false) do |event|
-  event << 'Heyo, I\'m Cah ~~and this is my pawn shop~~ and I\'m the person who made CB.'
-  event << ''
-  event << 'I\'m 13 years old and my name is Christopher Holland (How\'s it going?).'
-  event << 'So you might be wondering why CB is a thing, well, let me tell you.'
-  event << ''
-  event << '**Once Upon A Time** there was a bored Cah wondering what to do with his time.'
-  event << 'He then wondered how hard it is to make a Discord bot. For some reason.'
-  event << 'Scavenging the internet he found...**discordrb**. It seemed like a good enough programming language to use.'
-  event << 'He then rushes to the Discord API server, the page to create a bot user, etc.'
-  event << 'It was at this moment that Cah realized, he had no idea how to code'
-  event << 'Through determination and running off of example commands for a short while, he made a fairly basic bot'
-  event << 'This bot, was Cah Bot.'
-  event << ''
-  event << 'But Cah wasn\'t satisfied enough, so he bought an Ubuntu (Through Digital Ocean) for $10 a month, to keep CB alive 24/7.'
-  event << 'And after nearly destroying it (thanks Discord API server for trying to destroy me), it worked!'
-  event << '***The End***'
-end
+bot.mention do |event|
+  event.respond "Eyy, what's up? If you don't know my prefix, it's `^`, kthx"
 
 bot.command(:donate, help_available: false) do |event|
   event.respond "Hi #{event.user.name}, click here for donations: http://bit.ly/2gmWLAx!"
@@ -79,12 +63,14 @@ end
 
 bot.command(:help, chain_usable: false) do |event|
   event << ' Here are all of my commands for you to use!'
+  event << ' (upon bot mention) reminds you the prefix'
   event << ' ^about: Shows you some info about CB, or something'
   event << ' ^rnumber <Number> <Other Number>: Gives you a random number'
   event << ' ^help: Shows this, obviously'
   event << ' ^ping: Used to show response time'
   event << ' ^invite: Gives you a link to invite me to your own server!'
   event << ' ^die: Shuts me down, only Cah can use this command'
+  event << ' ^roll: Rolls a number between 1 and 6'
   event << ' ^eval: Like you don\'t know what eval commands do'
   event << ' ^donate: Want to donate? That\'s great! This command gives you a link for PayPal donations'
   event << ' ^update: Gives you the latest CB update'
