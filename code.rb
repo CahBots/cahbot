@@ -56,6 +56,7 @@ end
 
 bot.mention do |event|
   event.respond "Eyy, what's up? If you don't know my prefix, it's `^`, kthx"
+end
 
 bot.command(:donate, help_available: false) do |event|
   event.respond "Hi #{event.user.name}, click here for donations: http://bit.ly/2gmWLAx!"
