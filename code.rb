@@ -38,7 +38,7 @@ bot.command(:about, help_available: false) do |event|
   event << '**How\'s it going?** Good'
 end
 
-bot.message(with_text: '@Cah Bot prefix') do |event|
+bot.message(with_text: "@Cah Bot prefix") do |event|
   event.respond "Hey, I'm Cah Bot, my prefix is `^`. To see all commands, use `^help`"
 end
 
