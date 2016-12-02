@@ -26,12 +26,20 @@ end
 
 bot.command(:roll, description: 'Does something like rolling a dice!') do |event|
       h = event.respond '**Rolling Dice!**'
-      h.edit "I rolled you a #{rand(1..6)}!"
+      h.edit "And you got a... **#{rand(1..6)}!**"
 end
 
 bot.command(:about, help_available: false) do |event|
-  event.respond "Hello, I am Cah Bot, a small Discord bot with loads of potential. To learn more, or to tell me that I suck at bot creation, go here: https://discord.gg/zAbWXfe"
+  event << '***About Cah Bot:***'
+  event << 'Heyo, this is Cah Bot, "A small Discord bot with loads of potential"'
+  event << '**Who made CB?** Cah did (If you couldn\'t really tell).'
+  event << '**Where do I go to complain about CB?** Here: https://discord.gg/cWmvfmz .'
+  event << '**What lib do you use?** discordrb'
+  event << '**How\'s it going?** Good'
 end
+
+bot.message(with_text: '@Cah Bot prefix') do |event|
+  event.respond "Hey, I'm Cah Bot, my prefix is `^`. To see all commands, use `^help`"
 
 bot.command :rnumber do |event, min, max|
   rand(min.to_i .. max.to_i)
