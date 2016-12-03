@@ -21,12 +21,16 @@ end
 
 bot.command :ping do |event|
   m = event.respond('Pong!')
-  m.edit "Hey, that took #{((Time.now - event.timestamp) * 1000).to_i}ms."
+  m.edit "Pong! Hey, that took #{((Time.now - event.timestamp) * 1000).to_i}ms."
 end
 
 bot.command(:roll, description: 'Does something like rolling a dice!') do |event|
       h = event.respond '**Rolling Dice!**'
       h.edit "And you got a... **#{rand(1..6)}!**"
+end
+
+bot.command(:flip, help_available: false) do
+  %w(Heads Tails).sample
 end
 
 bot.command(:about, help_available: false) do |event|
@@ -59,8 +63,9 @@ bot.command(:update, help_available: false) do |event|
   event << ''
   event << 'Okay, I\'m on a half-break right now, but...'
   event << 'Added ^roll.'
-  event << 'Added a bot mention event, shows you the prefix'
-  event << 'Eyy, we have a new """staff""" member, say hello to him!'
+  event << 'Added ^flip.'
+  event << 'Added a event when you say "CB prefix", shows you the prefix'
+  event << 'Eyy, we have a new """staff""" member, say hello to him if he\'s here!'
 end
 
 bot.command(:donate, help_available: false) do |event|
@@ -73,6 +78,7 @@ bot.command(:help, chain_usable: false) do |event|
   event << ' ^about: Shows you some info about CB, or something'
   event << ' ^rnumber <Number> <Other Number>: Gives you a random number'
   event << ' ^help: Shows this, obviously'
+  event << ' ^flip: flips a coin, what else did you expect?'
   event << ' ^ping: Used to show response time'
   event << ' ^invite: Gives you a link to invite me to your own server!'
   event << ' ^die: Shuts me down, only Cah can use this command'
