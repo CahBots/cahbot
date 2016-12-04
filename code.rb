@@ -1,4 +1,6 @@
 require 'discordrb'
+require 'configatron'
+require_relative 'config.rb'
 
 bot = Discordrb::Commands::CommandBot.new token: 'MjQ5MjY4MzkzODE3OTMxNzc2.CxPvrg.q-NUnZK5BDt1htnOyV__02XSReg',  client_id: 249268393817931776, prefix: '^'
 
@@ -30,7 +32,7 @@ bot.command(:roll, description: 'Does something like rolling a dice!') do |event
 end
 
 bot.command(:flip, help_available: false) do
-  %w(Heads Tails).sample
+  %w(**Heads!** **Tails!**).sample
 end
 
 bot.command(:about, help_available: false) do |event|
