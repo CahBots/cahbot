@@ -62,7 +62,7 @@ end
 bot.command(:name, usage: 'name <name>', min_args: 1, help_available: false) do |event, url|
   break unless event.author.id == 228290433057292288
 
-  event.bot.profile.username = "new name"
+  event.bot.profile.username = "CahBot"
   'Heyo, CB\'s name was changed (Maybe he\'s not CB anymore lol)'
 end
 
