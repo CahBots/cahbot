@@ -4,6 +4,11 @@ require_relative 'config.rb'
 
 bot = Discordrb::Commands::CommandBot.new token: configatron.token, client_id: 249268393817931776, prefix: '^'
 
+BOT.ready do |event|
+  BOT.channel(255136906403119117).send_message("Cah Bot Notification | I am online and in #{bot.servers.length} servers!")
+end
+end
+
 bot.command(:die, help_available: false) do |event|
   if event.user.id == 228290433057292288
     bot.send_message(event.channel.id, 'CahBot is shutting down')
