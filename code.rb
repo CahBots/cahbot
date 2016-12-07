@@ -52,20 +52,6 @@ bot.message(with_text: 'CB prefix') do |event|
   event.respond "My prefix is `^`. To see all commands, use `^help`"
 end
 
-bot.command(:avatar, usage: 'avatar <url>', min_args: 1, help_available: false) do |event, url|
-  break unless event.author.id == 228290433057292288 && valid_url?(url)
-
-  event.bot.profile.avatar = open(url)
-  'Heyo, CB\'s avatar was changed'
-end
-
-bot.command(:name, usage: 'name <name>', min_args: 1, help_available: false) do |event, url|
-  break unless event.author.id == 228290433057292288
-
-  event.bot.profile.username = "CahBot"
-  'Heyo, CB\'s name was changed (Maybe he\'s not CB anymore lol)'
-end
-
 bot.command :rnumber do |event, min, max|
   rand(min.to_i .. max.to_i)
 end
