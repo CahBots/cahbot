@@ -5,20 +5,23 @@ require_relative 'config.rb'
 bot = Discordrb::Commands::CommandBot.new token: configatron.token, client_id: 249268393817931776, prefix: '^'
 
 bot.command(:die, help_available: false) do |event|
-  break unless event.user.id == 228290433057292288
-
-  bot.send_message(event.channel.id, 'Cah Bot is shutting down')
-  exit
+  if user_id == 228290433057292288
+    bot.send_message(event.channel.id, 'CahBot is shutting down')
+    exit
+  else 
+    "Hey, you can't do that!"
+  end
 end
 
 bot.command(:eval, help_available: false) do |event, *code|
-  break unless event.user.id == 228290433057292288
-
+if user_id == 228290433057292288
   begin
     eval code.join(' ')
   rescue
-    'An error occurred when doing that, Bloop'
+    'Do you even code. m8?'
   end
+else
+   "Hey, you're not Cah!"
 end
 
 bot.command :ping do |event|
@@ -37,15 +40,29 @@ end
 
 bot.command(:about, help_available: false) do |event|
   event << '***About Cah Bot:***'
-  event << 'Heyo, this is Cah Bot, "A small Discord bot with loads of potential"'
-  event << '**Who made CB?** Cah did (If you couldn\'t really tell).'
-  event << '**Where do I go to complain about CB?** Here: https://discord.gg/cWmvfmz .'
-  event << '**What lib do you use?** discordrb'
-  event << '**How\'s it going?** Good'
+  event << ''
+  event << '**Who made CB?** Cah#5153 made CahBot'
+  event << '**What lib is CB made in?** discordrb'
+  event << '**Where is the CB Server?** Here: https://goo.gl/02ZRK5'
+  event << '**u suk.** Thanks, feel free to stop by the CB Server to tell me why.'
 end
 
 bot.message(with_text: 'CB prefix') do |event|
   event.respond "My prefix is `^`. To see all commands, use `^help`"
+end
+
+bot.command(:avatar, usage: 'avatar <url>', min_args: 1, help_available: false) do |event, url|
+  break unless event.author.id == 228290433057292288 && valid_url?(url)
+
+  event.bot.profile.avatar = open(url)
+  'Heyo, CB\'s avatar was changed'
+end
+
+bot.command(:name, usage: 'name <name>', min_args: 1, help_available: false) do |event, url|
+  break unless event.author.id == 228290433057292288
+
+  event.bot.profile.username = "new name"
+  'Heyo, CB\'s name was changed (Maybe he\'s not CB anymore lol)'
 end
 
 bot.command :rnumber do |event, min, max|
@@ -53,21 +70,22 @@ bot.command :rnumber do |event, min, max|
 end
 
 bot.command(:invite, chain_usable: false) do |event|
-  event.respond "To invite me to your server, head over here: #{event.bot.invite_url}"
+  event.respond "To invite me to your server, head over here: https://goo.gl/ttNED9"
 end
 
 bot.command(:say, help_available: false, required_permissions: [:manage_messages]) do |_event, *args|
   "#{args.join(' ')}"
+  _event.message.delete
 end
 
 bot.command(:update, help_available: false) do |event|
   event << ' **Latest CahBot Update**'
   event << ''
-  event << 'Okay, I\'m on a half-break right now, but...'
-  event << 'Added ^roll.'
-  event << 'Added ^flip.'
-  event << 'Added a event when you say "CB prefix", shows you the prefix'
-  event << 'Eyy, we have a new """staff""" member, say hello to him if he\'s here!'
+  event << 'Hey hey heyo, CB is secure, now no one can steal my token, woot.'
+  event << 'Anyways, not much was done recently, with me panicking about my bot token or whatever.'
+  event << 'I\'ve rewritten the about command, for some reason.'
+  event << 'Minor changes to random code.'
+  event << 'Soooo close to ten servers.'
 end
 
 bot.command(:donate, help_available: false) do |event|
