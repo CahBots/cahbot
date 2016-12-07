@@ -8,20 +8,21 @@ bot.command(:die, help_available: false) do |event|
   if user_id == 228290433057292288
     bot.send_message(event.channel.id, 'CahBot is shutting down')
     exit
-  else 
+  else
     "Hey, you can't do that!"
   end
 end
 
 bot.command(:eval, help_available: false) do |event, *code|
-if user_id == 228290433057292288
-  begin
-    eval code.join(' ')
-  rescue
-    'Do you even code. m8?'
+  if user_id == 228290433057292288
+    begin
+      eval code.join(' ')
+    rescue
+      'Do you even code. m8?'
+    end
+  else
+     "Hey, you're not Cah!"
   end
-else
-   "Hey, you're not Cah!"
 end
 
 bot.command :ping do |event|
