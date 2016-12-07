@@ -4,8 +4,8 @@ require_relative 'config.rb'
 
 bot = Discordrb::Commands::CommandBot.new token: configatron.token, client_id: 249268393817931776, prefix: '^'
 
-BOT.ready do |event|
-  BOT.channel(255136906403119117).send_message("Cah Bot Notification | I am online and in #{bot.servers.length} servers!")
+bot.ready do |event|
+  bot.channel(255136906403119117).send_message("Cah Bot Notification | I am online and in #{bot.servers.length} servers!")
 end
 end
 
