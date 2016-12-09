@@ -72,7 +72,7 @@ bot.command(:update, help_available: false) do |event|
   event << 'Anyways, not much was done recently, with me panicking about my bot token or whatever.'
   event << 'I\'ve rewritten the about command, for some reason.'
   event << 'Minor changes to random code.'
-  event << 'Soooo close to ten servers.'
+  event << '**WE HIT 10 SERVERS!!!**'
 end
 
 bot.command(:donate, help_available: false) do |event|
