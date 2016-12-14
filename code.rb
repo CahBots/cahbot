@@ -4,8 +4,12 @@ require_relative 'config.rb'
 
 bot = Discordrb::Commands::CommandBot.new token: configatron.token, client_id: 249268393817931776, prefix: '^'
 
+bot.ready do |event|
+  bot.game="Use ^help or ^about"
+end
+
 bot.command(:die, help_available: false) do |event|
-  if event.user.id == 228290433057292288
+  if event.user.id == 228290433057292288, 121928183531569153
     bot.send_message(event.channel.id, 'CahBot is shutting down')
     exit
   else
@@ -14,14 +18,14 @@ bot.command(:die, help_available: false) do |event|
 end
 
 bot.command(:eval, help_available: false) do |event, *code|
-  if event.user.id == 228290433057292288
+  if event.user.id == 228290433057292288, 121928183531569153
     begin
       eval code.join(' ')
     rescue
       'Do you even code. m8?'
     end
   else
-     "Hey, you're not Cah!"
+     "Yo, you aren't allowed to do that!"
   end
 end
 
