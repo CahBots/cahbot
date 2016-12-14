@@ -9,7 +9,7 @@ bot.ready do |event|
 end
 
 bot.command(:die, help_available: false) do |event|
-  if event.user.id == 228290433057292288, 121928183531569153
+  if event.user.id == 228290433057292288
     bot.send_message(event.channel.id, 'CahBot is shutting down')
     exit
   else
@@ -18,7 +18,7 @@ bot.command(:die, help_available: false) do |event|
 end
 
 bot.command(:eval, help_available: false) do |event, *code|
-  if event.user.id == 228290433057292288, 121928183531569153
+  if event.user.id == 228290433057292288
     begin
       eval code.join(' ')
     rescue
