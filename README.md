@@ -1,47 +1,17 @@
 # CahBot
+-----    
+### A Discord bot that's kinda cool that's being updated frequently, written in Ruby
 
-#### ***A small Discord bot with loads of potential***
+Welcome to the CahBot website, where you can learn about CB and how to host it yourself, if you want
+-----     
+### What *IS* CahBot, anyway?
+CahBot is a small little Discord bot project I'm making that will have a bundle of useful features and fun stuff in the future.
 
-Heyo, this is CahBot, a small Discord bot with- wait, I'm repeating myself here. Uhh...
+### How long did it take to make this?
+Considering that he's still being worked on, an infinite amount of time?
 
-#### **CahBot:** A bot that kinda sucks
+### How to host?
+To host your own version... Actually you should already know how to host Ruby stuff
+but if you really don't know, learn.
 
-Wait, no, that's bad to say
-
-Hold on...
-
-#### **CahBot:** A bot that kinda sucks but is being worked on every day
-
-Better
-
-Anyways, here's the current command list (literally just copy & pasted from the command list)
-
- (upon saying "CB prefix") reminds you the prefix
- 
- ^about: Shows you some info about CB, or something
- 
- ^rnumber <Number> <Other Number>: Gives you a random number
- 
- ^help: Shows this, obviously
- 
- ^flip: flips a coin, what else did you expect?
- 
- ^ping: Used to show response time
- 
- ^invite: Gives you a link to invite me to your own server!
- 
- ^die: Shuts me down, only Cah can use this command
- 
- ^roll: Rolls a number between 1 and 6
- 
- ^eval: Like you don't know what eval commands do
- 
- ^donate: Want to donate? That's great! This command gives you a link for PayPal donations
- 
- ^update: Gives you the latest CB update
- 
- ^say: Makes CB say something, you need the manage messages perm tho
- 
-#### **Why is this repo here, you may ask**
- 
- Well, it's a pretty easy way to transfer code from my PC to my VPS, that's the only reason. But if you want, you can use some of the code
+## I'm still working on this page, more info will come soon:tm:
