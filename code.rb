@@ -34,6 +34,10 @@ bot.command :ping do |event|
   m.edit "Pong! Hey, that took #{((Time.now - event.timestamp) * 1000).to_i}ms."
 end
 
+bot.command(:eightball, help_available: false) do |event|
+  event.respond ["As I see it, yes", "It is certain", "It is decidedly so", "Most likely", "Outlook good", "Signs point to yes", "Without a doubt", "Yes", "Yes – definitely", "You may rely on it", "Reply hazy, try again", "Ask again later", "Better not tell you now", "Cannot predict now", "Concentrate and ask again", "Don't count on it", "My reply is no", "My sources say no", "Outlook not so good", "Very doubtful"].sample
+end
+
 bot.command(:roll, description: 'Does something like rolling a dice!') do |event|
       h = event.respond '**Rolling Dice!**'
       h.edit "And you got a... **#{rand(1..6)}!**"
@@ -43,8 +47,8 @@ bot.command(:flip, help_available: false) do
   %w(**Heads!** **Tails!**).sample
 end
 
-bot.command(:about, help_available: false) do |event|
-  event << '***About Cah Bot:***'
+bot.command(:info, help_available: false) do |event|
+  event << '***Info About CahBot:***'
   event << ''
   event << '**Who made CB?** Cah#5153 made CahBot'
   event << '**What lib is CB made in?** discordrb'
@@ -69,6 +73,10 @@ bot.command(:say, help_available: false, required_permissions: [:manage_messages
   "#{args.join(' ')}"
 end
 
+bot.command(:reverse, help_available: false) do |event, *args|
+  "#{args.join(' ')}".reverse
+end
+
 bot.command(:userinfo, help_available: false) do |event|
   event << "**__User Info For You__**"
   event << ""
@@ -83,7 +91,7 @@ end
 bot.command(:update, help_available: false) do |event|
   event << '**Latest CahBot Update**'
   event << ''
-  event << 'woahdude, we have a userinfo command, pretty basic rn but still neat'
+  event << 'woahdude, we have a userinfo command and a bunch of other stuff, pretty basic rn but still neat'
   event << 'We both gained and lost ~~the same~~ "staff" member, so yay???'
   evnet << '^help and ^cmds are seperate commands now, so don\'t panick or anything please'
 end
@@ -102,8 +110,12 @@ bot.command(:cmds, chain_usable: false) do |event|
   event << ' (upon saying "CB prefix") reminds you the prefix'
   event << ' ^about: Shows you some info about CB, or something'
   event << ' ^rnumber <Number> <Other Number>: Gives you a random number'
-  event << ' ^help: Shows this, obviously'
-  event << ' ^flip: flips a coin, what else did you expect?'
+  event << ' ^help: Basically tells you to go here'
+  event << ' ^cmds: pulls up this'
+  event << ' ^eightball: Ask the 8ball something'
+  event << ' ^userinfo: Shows some info about you'
+  event << ' ^reverse: Reverses text'
+  event << ' ^flip: Flips a coin, what else did you expect?'
   event << ' ^ping: Used to show response time'
   event << ' ^invite: Gives you a link to invite me to your own server!'
   event << ' ^die: Shuts me down, only Cah can use this command'
