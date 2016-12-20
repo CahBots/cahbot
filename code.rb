@@ -29,25 +29,25 @@ bot.command(:eval, help_available: false) do |event, *code|
   end
 end
 
-bot.command :ping do |event|
+bot.command(:ping, help_available: false, max_args: 0) do |event|
   m = event.respond('Pong!')
   m.edit "Pong! Hey, that took #{((Time.now - event.timestamp) * 1000).to_i}ms."
 end
 
-bot.command(:eightball, help_available: false) do |event|
-  event.respond ["As I see it, yes", "It is certain", "It is decidedly so", "Most likely", "Outlook good", "Signs point to yes", "Without a doubt", "Yes", "Yes – definitely", "You may rely on it", "Reply hazy, try again", "Ask again later", "Better not tell you now", "Cannot predict now", "Concentrate and ask again", "Don't count on it", "My reply is no", "My sources say no", "Outlook not so good", "Very doubtful"].sample
+bot.command(:eightball, help_available: false, min_args: 1) do |event|
+  event.respond ["Sources say... Yeah", "Sources say... Nah", "Perhaps", "As I see it, yes", "As I see it, no", "If anything, probably", "Not possible", "Ask again at a later time", "Say that again?", "lol idk", "Probably not", "woahdude", "[object Object]", "Undoubtfully so", "I doubt it", "Eh, maybe"].sample
 end
 
-bot.command(:roll, description: 'Does something like rolling a dice!') do |event|
+bot.command(:roll, help_available: false, max_args: 0) do |event|
       h = event.respond '**Rolling Dice!**'
       h.edit "And you got a... **#{rand(1..6)}!**"
 end
 
-bot.command(:flip, help_available: false) do
-  %w(**Heads!** **Tails!**).sample
+bot.command(:flip, help_available: false, max_args: 0) do |event|
+  m = event.respond ["woahdude, you got **Heads**", "woahdude, you got **Tails**", "Oops, the coin flipped so high it didn't come back down", "The coin multiplied and landed on both", "The coin... disappeared", "You got **heads**", "You got **tails**"].sample
 end
 
-bot.command(:info, help_available: false) do |event|
+bot.command(:info, help_available: false, max_args: 0) do |event|
   event << '***Info About CahBot:***'
   event << ''
   event << '**Who made CB?** Cah#5153 made CahBot'
@@ -60,35 +60,35 @@ bot.message(with_text: 'CB prefix') do |event|
   event.respond "My prefix is `^`. For help, do `^help`"
 end
 
-bot.command :rnumber do |event, min, max|
+bot.command(:rnumber, help_available: false, min_args: 2, max_args: 2) do |event, min, max|
   rand(min.to_i .. max.to_i)
 end
 
-bot.command(:invite, chain_usable: false) do |event|
+bot.command(:invite, help_available: false, max_args: 0) do |event|
   event.respond "To invite me to your server, head over here: https://goo.gl/ttNED9"
 end
 
-bot.command(:say, help_available: false, required_permissions: [:manage_messages]) do |_event, *args|
+bot.command(:say, help_available: false, required_permissions: [:manage_messages], min_args: 1) do |_event, *args|
   _event.message.delete
   "#{args.join(' ')}"
 end
 
-bot.command(:reverse, help_available: false) do |event, *args|
+bot.command(:reverse, help_available: false, min_args: 1) do |event, *args|
   "#{args.join(' ')}".reverse
 end
 
-bot.command(:userinfo, help_available: false) do |event|
+bot.command(:userinfo, help_available: false, max_args: 0) do |event|
   event << "**__User Info For You__**"
   event << ""
   event << "**User ID:** `#{event.user.id}`"
   event << "**User Discrim:** `#{event.user.discrim}`"
   event << "**Username:** `#{event.user.name}`"
   event << "**Are You A Bot?** `#{event.user.current_bot?}`"
-  event << "**Your Nickname?** `#{event.user.nick}`"
+  event << "**User Nickname?** `#{event.user.nick}`"
   event << "**User Avatar:** https://discordapp.com/api/v6/users/#{event.user.id}/avatars/#{event.user.avatar_id}.jpg"
 end
 
-bot.command(:update, help_available: false) do |event|
+bot.command(:update, help_available: false, max_args: 0) do |event|
   event << '**Latest CahBot Update**'
   event << ''
   event << 'woahdude, we have a userinfo command and a bunch of other stuff, pretty basic rn but still neat'
@@ -96,19 +96,19 @@ bot.command(:update, help_available: false) do |event|
   evnet << '^help and ^cmds are seperate commands now, so don\'t panick or anything please'
 end
 
-bot.command(:donate, help_available: false) do |event|
+bot.command(:donate, help_available: false, max_args: 0) do |event|
   event.respond "Hi #{event.user.name}, click here for donations: http://bit.ly/2gmWLAx!"
 end
 
-bot.command(:help, help_available: false) do |event|
+bot.command(:help, help_available: false, max_args: 0) do |event|
   event << ' woahdude, you looking for help? Well, here\'s what you need to know.'
   event << ' For a list of commands, you can do `^cmds`, for info about CahBot, do `^info`'
 end
 
-bot.command(:cmds, chain_usable: false) do |event|
+bot.command(:cmds, chain_usable: false, max_args: 0) do |event|
   event << ' Here are all of my commands for you to use!'
   event << ' (upon saying "CB prefix") reminds you the prefix'
-  event << ' ^about: Shows you some info about CB, or something'
+  event << ' ^info: Shows you some info about CB, or something'
   event << ' ^rnumber <Number> <Other Number>: Gives you a random number'
   event << ' ^help: Basically tells you to go here'
   event << ' ^cmds: pulls up this'
