@@ -5,7 +5,7 @@ require_relative 'config.rb'
 bot = Discordrb::Commands::CommandBot.new token: configatron.token, client_id: 249268393817931776, prefix: '^'
 
 bot.ready do |event|
-  bot.game="Use ^help or ^about"
+  bot.game="Use ^cmds or ^info"
 end
 
 bot.command(:die, help_available: false) do |event|
