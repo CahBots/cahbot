@@ -95,6 +95,7 @@ end
 bot.command(:help, help_available: false) do |event|
   event << ' woahdude, you looking for help? Well, here\'s what you need to know.'
   event << ' For a list of commands, you can do `^cmds`, for info about CahBot, do `^info`'
+end
 
 bot.command(:cmds, chain_usable: false) do |event|
   event << ' Here are all of my commands for you to use!'
