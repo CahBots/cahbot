@@ -53,7 +53,7 @@ bot.command(:about, help_available: false) do |event|
 end
 
 bot.message(with_text: 'CB prefix') do |event|
-  event.respond "My prefix is `^`. To see all commands, use `^help`"
+  event.respond "My prefix is `^`. For help, do `^help`"
 end
 
 bot.command :rnumber do |event, min, max|
@@ -69,21 +69,34 @@ bot.command(:say, help_available: false, required_permissions: [:manage_messages
   "#{args.join(' ')}"
 end
 
+bot.command(:userinfo, help_available: false) do |event|
+  event << "**__User Info For You__**"
+  event << ""
+  event << "**User ID:** `#{event.user.id}`"
+  event << "**User Discrim:** `#{event.user.discrim}`"
+  event << "**Username:** `#{event.user.name}`"
+  event << "**Are You A Bot?** `#{event.user.current_bot?}`"
+  event << "**Your Nickname?** `#{event.user.nick}`"
+  event << "**User Avatar:** https://discordapp.com/api/v6/users/#{event.user.id}/avatars/#{event.user.avatar_id}.jpg"
+end
+
 bot.command(:update, help_available: false) do |event|
-  event << ' **Latest CahBot Update**'
+  event << '**Latest CahBot Update**'
   event << ''
-  event << 'Hey hey heyo, CB is secure, now no one can steal my token, woot.'
-  event << 'Anyways, not much was done recently, with me panicking about my bot token or whatever.'
-  event << 'I\'ve rewritten the about command, for some reason.'
-  event << 'Minor changes to random code.'
-  event << '**WE HIT 10 SERVERS!!!**'
+  event << 'woahdude, we have a userinfo command, pretty basic rn but still neat'
+  event << 'We both gained and lost ~~the same~~ "staff" member, so yay???'
+  evnet << '^help and ^cmds are seperate commands now, so don\'t panick or anything please'
 end
 
 bot.command(:donate, help_available: false) do |event|
   event.respond "Hi #{event.user.name}, click here for donations: http://bit.ly/2gmWLAx!"
 end
 
-bot.command(:help, chain_usable: false) do |event|
+bot.command(:help, help_available: false) do |event|
+  event << ' woahdude, you looking for help? Well, here\'s what you need to know.'
+  event << ' For a list of commands, you can do `^cmds`, for info about CahBot, do `^info`'
+
+bot.command(:cmds, chain_usable: false) do |event|
   event << ' Here are all of my commands for you to use!'
   event << ' (upon saying "CB prefix") reminds you the prefix'
   event << ' ^about: Shows you some info about CB, or something'
