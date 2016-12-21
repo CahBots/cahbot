@@ -126,9 +126,4 @@ bot.command(:cmds, chain_usable: false, max_args: 0) do |event|
   event << ' ^say: Makes CB say something, you need the manage messages perm tho'
 end
 
-bot.command(:prune, help_available: false, required_permissions: [:manage_messages], min_args: 1, max_args: 1) do|event, *args|
-	#prune(#{args.join('')})
-	#send_temporary_message("Pruned #{args.join('')} regrettable jokes", 10, tts = false)
-end
-
 bot.run
