@@ -97,7 +97,7 @@ bot.command(:update, help_available: false, max_args: 0) do |event|
 end
 
 bot.command(:donate, help_available: false, max_args: 0) do |event|
-  event.respond "Hi #{event.user.name}, click here for donations: http://bit.ly/2gmWLAx!"
+  event.respond "Hi #{event.user.name}, click here for donations: https://goo.gl/kF20Xw ~~not a virus i swear~~"
 end
 
 bot.command(:help, help_available: false, max_args: 0) do |event|
@@ -121,7 +121,7 @@ bot.command(:cmds, chain_usable: false, max_args: 0) do |event|
   event << ' ^die: Shuts me down, only Cah can use this command'
   event << ' ^roll: Rolls a number between 1 and 6'
   event << ' ^eval: Like you don\'t know what eval commands do'
-  event << ' ^donate: Want to donate? That\'s great! This command gives you a link for PayPal donations'
+  event << ' ^donate: Want to donate? That\'s great! This command gives you a link for Donorbox donations'
   event << ' ^update: Gives you the latest CB update'
   event << ' ^say: Makes CB say something, you need the manage messages perm tho'
 end
