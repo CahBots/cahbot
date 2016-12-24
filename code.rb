@@ -44,7 +44,7 @@ bot.command(:roll, help_available: false, max_args: 0) do |event|
 end
 
 bot.command(:flip, help_available: false, max_args: 0) do |event|
-  m = event.respond ["woahdude, you got **Heads**", "woahdude, you got **Tails**", "Oops, the coin flipped so high it didn't come back down", "The coin multiplied and landed on both", "The coin... disappeared", "You got **heads**", "You got **tails**"].sample
+  m = event.respond ["woahdude, you got **Heads**", "woahdude, you got **Tails**", "Oops, the coin flipped so high it didn't come back down", "The coin multiplied and landed on both", "The coin... disappeared", "You got **heads**", "You got **tails**", "The coin landed on it's side then tipped over to **heads**", "The coin landed on it's side then tipped over to **tails**", "And you got a... **#{rand(1..6)}!** wait what", "The coin landed on **heads** but bounced over to **tails**", "The coin landed on **tails** but bounced over to **heads**", "What coin?", "Perhaps you could resolve your situation without relying on luck", "Pong! It took **#{((Time.now - event.timestamp) * 1000).to_i}**ms to ping the coin"].sample
 end
 
 bot.command(:info, help_available: false, max_args: 0) do |event|
