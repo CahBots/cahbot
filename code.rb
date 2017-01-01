@@ -44,7 +44,11 @@ bot.command(:roll, help_available: false, max_args: 0) do |event|
 end
 
 bot.command(:flip, help_available: false, max_args: 0) do |event|
-  m = event.respond ["woahdude, you got **Heads**", "woahdude, you got **Tails**", "Oops, the coin flipped so high it didn't come back down", "The coin multiplied and landed on both", "The coin... disappeared", "You got **heads**", "You got **tails**"].sample
+  m = event.respond ["woahdude, you got **Heads**", "woahdude, you got **Tails**", "You got **heads**", "You got **tails**"].sample
+end
+
+bot.command(:flop, help_available: false, max_args: 0) do |event|
+  m = event.respond ["Oops, the coin flipped so high it didn't come back down", "The coin multiplied and landed on both", "The coin... disappeared", "Pong! It took **#{((Time.now - event.timestamp) * 1000).to_i}ms** to ping the coin", "And you got a... **#{rand(1..6)}!** wait thats not how coins work", "Perhaps you could resolve your situation without relying on luck", "noot", "[Witty joke concerning flipping a coin]", "[BOTTOM TEXT]"].sample
 end
 
 bot.command(:info, help_available: false, max_args: 0) do |event|
@@ -59,6 +63,10 @@ end
 
 bot.message(with_text: 'CB prefix') do |event|
   event.respond "My prefix is `^`. For help, do `^help`"
+end
+
+bot.message(with_text: '(╯°□°）╯︵ ┻━┻') do |event|
+  event.respond "┬─┬ ノ( ゜-゜ノ)"
 end
 
 bot.command(:rnumber, help_available: false, min_args: 2, max_args: 2) do |event, min, max|
@@ -110,6 +118,9 @@ bot.command(:help, help_available: false, max_args: 0) do |event|
   event << ' For a list of commands, you can do `^cmds`, for info about CahBot, do `^info`'
 end
 
+bot.command(:noot, help_available: false, max_args: 0) do |event|
+  event.respond "NOOT https://s-media-cache-ak0.pinimg.com/originals/fe/cb/80/fecb80585eca20163a4d57fa281610b8.gif"
+
 bot.command([:cmds, :commands], chain_usable: false, max_args: 0) do |event|
   event << ' Here are all of my commands for you to use!'
   event << ' (upon saying "CB prefix") reminds you the prefix'
@@ -121,6 +132,7 @@ bot.command([:cmds, :commands], chain_usable: false, max_args: 0) do |event|
   event << ' ^userinfo: Shows some info about you'
   event << ' ^reverse: Reverses text'
   event << ' ^flip: Flips a coin, what else did you expect?'
+  event << ' ^flop: Flops a coin, what expect did you else?'
   event << ' ^ping: Used to show response time'
   event << ' ^servercount: Returns the number of servers CB is in'
   event << ' ^invite: Gives you a link to invite me to your own server!'
@@ -130,6 +142,7 @@ bot.command([:cmds, :commands], chain_usable: false, max_args: 0) do |event|
   event << ' ^donate: Want to donate? That\'s great! This command gives you a link for Donorbox donations'
   event << ' ^update: Gives you the latest CB update'
   event << ' ^say: Makes CB say something, you need the manage messages perm tho'
+  event << ' ^noot: noot
 end
 
 bot.run
