@@ -99,6 +99,7 @@ end
 
 bot.command([:servercount, :servcount], help_available: false, max_args: 0) do |event|
   event.respond "CahBot is on **#{bot.servers.count}** servers as of now"
+end
 
 bot.command(:donate, help_available: false, max_args: 0) do |event|
   event.respond "Hi #{event.user.name}, click here for donations: https://goo.gl/kF20Xw ~~not a virus i swear~~"
