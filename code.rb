@@ -53,6 +53,7 @@ bot.command(:info, help_available: false, max_args: 0) do |event|
   event << "**What is CahBot?** CB is a small Discord bot with loads of potential."
   event << "**Who made CahBot?** Cah#5153 coded CahBot, with help from happyzachariah#6121 and others"
   event << "**Why does CahBot exist?** One day I was bored so I made a Discord bot. End of story kthxbai"
+  event << "**Does CahBot have a server or something?** You bet, https://goo.gl/02ZRK5"
   event << "**u suk a bunnch an u can hardly mak a discord bawt.** Radical, thank you for noticing"
 end
 
