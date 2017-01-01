@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 require 'discordrb'
 require 'configatron'
 require_relative 'config.rb'
