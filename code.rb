@@ -30,7 +30,7 @@ bot.command(:eval, help_available: false) do |event, *code|
 end
 
 bot.command(:ping, help_available: false, max_args: 0) do |event|
-  m = event.respond('Pong!')
+  m = event.respond('Pinging!')
   m.edit "Pong! Hey, that took #{((Time.now - event.timestamp) * 1000).to_i}ms."
 end
 
@@ -40,6 +40,7 @@ end
 
 bot.command(:roll, help_available: false, max_args: 0) do |event|
       h = event.respond '**Rolling Dice!**'
+  sleep 2
       h.edit "And you got a... **#{rand(1..6)}!**"
 end
 
@@ -63,10 +64,6 @@ end
 
 bot.message(with_text: 'CB prefix') do |event|
   event.respond "My prefix is `^`. For help, do `^help`"
-end
-
-bot.message(with_text: '(╯°□°）╯︵ ┻━┻') do |event|
-  event.respond "┬─┬ ノ( ゜-゜ノ)"
 end
 
 bot.command(:rnumber, help_available: false, min_args: 2, max_args: 2) do |event, min, max|
@@ -120,7 +117,8 @@ end
 
 bot.command(:noot, help_available: false, max_args: 0) do |event|
   event.respond "NOOT https://s-media-cache-ak0.pinimg.com/originals/fe/cb/80/fecb80585eca20163a4d57fa281610b8.gif"
-
+end
+  
 bot.command([:cmds, :commands], chain_usable: false, max_args: 0) do |event|
   event << ' Here are all of my commands for you to use!'
   event << ' (upon saying "CB prefix") reminds you the prefix'
@@ -142,7 +140,7 @@ bot.command([:cmds, :commands], chain_usable: false, max_args: 0) do |event|
   event << ' ^donate: Want to donate? That\'s great! This command gives you a link for Donorbox donations'
   event << ' ^update: Gives you the latest CB update'
   event << ' ^say: Makes CB say something, you need the manage messages perm tho'
-  event << ' ^noot: noot
+  event << ' ^noot: noot'
 end
 
 bot.run
