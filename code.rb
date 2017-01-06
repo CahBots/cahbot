@@ -146,6 +146,7 @@ bot.command([:cmds, :commands], chain_usable: false, max_args: 0) do |event|
   event << ' ^donate: Want to donate? That\'s great! This command gives you a link for Donorbox donations'
   event << ' ^update: Gives you the latest CB update'
   event << ' ^say: Makes CB say something, you need the manage messages perm tho'
+  event << ' ^thanks: Thanks to these radical donors!'
   event << ' ^noot: noot'
 end
 
