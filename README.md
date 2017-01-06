@@ -37,6 +37,7 @@ Command |  Description
 `^donate` | Want to donate? That's great! This command gives you a link for Donorbox donations
 `^update` | Gives you the latest CB update
 `^say` | Makes CB say something, you need the manage messages permission tho
+`^noot` | NOOT (aka best command)
  
 #### **Why is this repo here, you may ask**
  

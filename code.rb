@@ -13,7 +13,7 @@ bot.command(:die, help_available: false) do |event|
     bot.send_message(event.channel.id, 'CahBot is shutting down')
     exit
   else
-    "Hey, you can't do that!"
+    "Hey, you can't do that! (Why would you even want to?)"
   end
 end
 
@@ -52,8 +52,8 @@ bot.command(:flop, help_available: false, max_args: 0) do |event|
   m = event.respond ["Oops, the coin flipped so high it didn't come back down", "The coin multiplied and landed on both", "The coin... disappeared", "Pong! It took **#{((Time.now - event.timestamp) * 1000).to_i}ms** to ping the coin", "And you got a... **#{rand(1..6)}!** wait thats not how coins work", "Perhaps you could resolve your situation without relying on luck", "noot", "[Witty joke concerning flipping a coin]", "[BOTTOM TEXT]"].sample
 end
 
-bot.command(:info, help_available: false, max_args: 0) do |event|
-  event << "***Info About CahBot:***"
+bot.command([:info, :faq], help_available: false, max_args: 0) do |event|
+  event << "***Info/NSFAQ About CahBot:***"
   event << ""
   event << "**What is CahBot?** CB is a small Discord bot with loads of potential."
   event << "**Who made CahBot?** Cah#5153 coded CahBot, with help from happyzachariah#6121 and others"
@@ -63,7 +63,7 @@ bot.command(:info, help_available: false, max_args: 0) do |event|
 end
 
 bot.message(with_text: 'CB prefix') do |event|
-  event.respond "My prefix is `^`. For help, do `^help`"
+  event.respond "My prefix is `^`. For help, do `^help`. For commands do `^cmds`"
 end
 
 bot.command(:rnumber, help_available: false, min_args: 2, max_args: 2) do |event, min, max|
@@ -95,10 +95,13 @@ bot.command(:userinfo, help_available: false, max_args: 0) do |event|
 end
 
 bot.command(:update, help_available: false, max_args: 0) do |event|
-  event << '**Latest CahBot Update**'
+  event << '**Latest CahBot Updates**'
   event << ''
   event << 'No more will I have to do `^eval bot.servers.count` because we now have **^servercount**!'
   event << 'A couple stuff was updated, some commands now have ailiases (^commands and ^cmds return the same thing, ^servcount is the same as ^servercount, etc.).'
+  event << 'Cool new pingu command.'
+  event << '^roll now takes a few seconds to actually roll'
+  evemt << 'Ping now says pinging before it says pong!`
   event << 'That\'s about all that was done recently'
 end
 
@@ -125,7 +128,7 @@ bot.command([:cmds, :commands], chain_usable: false, max_args: 0) do |event|
   event << ' ^info: Shows you some info about CB, or something'
   event << ' ^rnumber <Number> <Other Number>: Gives you a random number'
   event << ' ^help: Basically tells you to go here'
-  event << ' ^cmds: pulls up this'
+  event << ' ^cmds: Pulls up this'
   event << ' ^eightball: Ask the 8ball something'
   event << ' ^userinfo: Shows some info about you'
   event << ' ^reverse: Reverses text'
