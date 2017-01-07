@@ -96,8 +96,7 @@ end
 
 bot.command(:thanks, help_available: false, max_args: 0) do |event|
   event << "Thanks so much to these current Donors:"
-  event << "..."
-  event << "No Donors yet :neutral_face:"
+  event << "ChewLeKitten#6216 - Tier 1 Donor"
 end
 
 bot.command(:update, help_available: false, max_args: 0) do |event|
