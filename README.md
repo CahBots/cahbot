@@ -1,6 +1,6 @@
 # CahBot
 -----    
-### A Discord bot that's kinda cool that's being updated frequently, written in Ruby
+<h2>A Discord bot that's kinda cool that's being updated frequently, written in Ruby</h2>
 
 Welcome to the CahBot website, where you can learn about CB and how to host it yourself, if you want
 -----     
