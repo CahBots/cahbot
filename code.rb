@@ -127,26 +127,37 @@ end
 bot.command([:cmds, :commands], chain_usable: false, max_args: 0) do |event|
   event << ' Here are all of my commands for you to use!'
   event << ' (upon saying "CB prefix") reminds you the prefix'
-  event << ' ^info: Shows you some info about CB, or something'
-  event << ' ^rnumber <Number> <Other Number>: Gives you a random number'
-  event << ' ^help: Basically tells you to go here'
-  event << ' ^cmds: pulls up this'
-  event << ' ^eightball: Ask the 8ball something'
-  event << ' ^userinfo: Shows some info about you'
-  event << ' ^reverse: Reverses text'
-  event << ' ^flip: Flips a coin, what else did you expect?'
-  event << ' ^flop: Flops a coin, what expect did you else?'
-  event << ' ^ping: Used to show response time'
-  event << ' ^servercount: Returns the number of servers CB is in'
-  event << ' ^invite: Gives you a link to invite me to your own server!'
-  event << ' ^die: Shuts me down, only Cah can use this command'
-  event << ' ^roll: Rolls a number between 1 and 6'
-  event << ' ^eval: Like you don\'t know what eval commands do'
-  event << ' ^donate: Want to donate? That\'s great! This command gives you a link for Donorbox donations'
-  event << ' ^update: Gives you the latest CB update'
-  event << ' ^say: Makes CB say something, you need the manage messages perm tho'
-  event << ' ^thanks: Thanks to these radical donors!'
-  event << ' ^noot: noot'
+  event << ' `^info`: Shows you some info about CB, or something'
+  event << ' `^rnumber <Number> <Other Number>`: Gives you a random number'
+  event << ' `^help`: Basically tells you to go here'
+  event << ' `^cmds`: pulls up this'
+  event << ' `^eightball`: Ask the 8ball something'
+  event << ' `^userinfo`: Shows some info about you'
+  event << ' `^reverse`: Reverses text'
+  event << ' `^flip`: Flips a coin, what else did you expect?'
+  event << ' `^flop`: Flops a coin, what expect did you else?'
+  event << ' `^ping`: Used to show response time'
+  event << ' `^servercount`: Returns the number of servers CB is in'
+  event << ' `^invite`: Gives you a link to invite me to your own server!'
+  event << ' `^die`: Shuts me down, only Cah can use this command'
+  event << ' `^roll`: Rolls a number between 1 and 6'
+  event << ' `^eval`: Like you don\'t know what eval commands do'
+  event << ' `^donate`: Want to donate? That\'s great! This command gives you a link for Donorbox donations'
+  event << ' `^update`: Gives you the latest CB update'
+  event << ' `^say`: Makes CB say something, you need the manage messages perm tho'
+  event << ' `^thanks`: Thanks to these radical donors!'
+  event << ' `^feedback <words>`: Want to tell me my bot sucks without going into the CB Server? Well, here you go.'
+  event << ' `^noot`: noot'
+end
+
+bot.command(:feedback, min_args: 1) do |event, *args|
+  event.message.delete
+  bot.send_message(252239053712392192, "New Feedback from `#{event.user.name}`\##{event.user.discriminator}. ID: #{event.user.id}. From the land of `#{event.server.name}` (Server ID: #{event.server.id}).
+
+*#{args.join(' ')}*")
+  m = (event.respond "Radical! Feedback sent.")
+  sleep 5
+  m.delete
 end
 
 bot.run
