@@ -56,7 +56,7 @@ bot.command(:info, help_available: false, max_args: 0) do |event|
   event << "***Info About CahBot:***"
   event << ""
   event << "**What is CahBot?** CB is a small Discord bot with loads of potential."
-  event << "**Who made CahBot?** Cah#5153 coded CahBot, with help from happyzachariah#6121 and others"
+  event << "**Who made CahBot?** Cah#5153 coded CahBot, with some help from happyzachariah#6121, tons of help from ChewLeKitten#6216 & others"
   event << "**Why does CahBot exist?** One day I was bored so I made a Discord bot. End of story kthxbai"
   event << "**Does CahBot have a server or something?** You bet, https://goo.gl/02ZRK5"
   event << "**u suk a bunnch an u can hardly mak a discord bawt.** Radical, thank you for noticing"
@@ -96,7 +96,7 @@ end
 
 bot.command(:thanks, help_available: false, max_args: 0) do |event|
   event << "Thanks so much to these current Donors:"
-  event << "ChewLeKitten#6216 - Tier 1 Donor"
+  event << "ChewLeKitten#6216 - Tier 1 Donor, Contributor, and a ultra-rad person"
 end
 
 bot.command(:update, help_available: false, max_args: 0) do |event|
