@@ -21,8 +21,10 @@ bot.command(:eval, help_available: false) do |event, *code|
   if event.user.id == 228290433057292288
     begin
       eval code.join(' ')
-    rescue
-      'Do you even code. m8?'
+    rescue => e
+      event << "Ah geez, something went wrong, it says:"
+      event << "```"
+      event << "#{e} ```"
     end
   else
      "Yo, you aren't allowed to do that!"
@@ -151,13 +153,18 @@ bot.command([:cmds, :commands], chain_usable: false, max_args: 0) do |event|
 end
 
 bot.command(:feedback, min_args: 1) do |event, *args|
-  event.message.delete
-  bot.send_message(252239053712392192, "New Feedback from `#{event.user.name}`\##{event.user.discriminator}. ID: #{event.user.id}. From the land of `#{event.server.name}` (Server ID: #{event.server.id}).
+  if event.channel.pm? == true
+    event.respond "Sorry, you can't send feedback via PM just yet!"
+  break
+  else
+    event.message.delete
+    bot.send_message(252239053712392192, "New Feedback from `#{event.user.name}`\##{event.user.discriminator}. ID: #{event.user.id}. From the land of `#{event.server.name}` (Server ID: #{event.server.id}).
 
 *#{args.join(' ')}*")
-  m = (event.respond "Radical! Feedback sent.")
-  sleep 5
-  m.delete
+    m = (event.respond "Radical! Feedback sent.")
+    sleep 5
+    m.delete
+  end
 end
 
 bot.run
