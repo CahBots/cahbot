@@ -2,7 +2,7 @@ require 'discordrb'
 require 'configatron'
 require_relative 'config.rb'
 
-bot = Discordrb::Commands::CommandBot.new token: configatron.token, client_id: 249268393817931776, prefix: '^'
+bot = Discordrb::Commands::CommandBot.new token: configatron.token, client_id: 249268393817931776, prefix: ['<@249268393817931776>', '^'], ignore_bots: true
 
 bot.ready do |event|
   bot.game="Use ^cmds or ^info"
@@ -104,9 +104,7 @@ end
 bot.command(:update, help_available: false, max_args: 0) do |event|
   event << '**Latest CahBot Update**'
   event << ''
-  event << 'No more will I have to do `^eval bot.servers.count` because we now have **^servercount**!'
-  event << 'A couple stuff was updated, some commands now have ailiases (^commands and ^cmds return the same thing, ^servcount is the same as ^servercount, etc.).'
-  event << 'That\'s about all that was done recently'
+  event << 'What'
 end
 
 bot.command([:servercount, :servcount], help_available: false, max_args: 0) do |event|
