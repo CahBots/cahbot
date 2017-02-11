@@ -31,6 +31,17 @@ bot.command(:eval, help_available: false) do |event, *code|
   end
 end
 
+bot.command(:restart, help_available: false) do |event|
+  if event.user.id == 228290433057292288
+    begin
+      event.respond ["Into the ***fuuuutttttuuuuurrrreeee***", "Please wait...", "How about n—", "Can do :thumbsup::skin-tone-1:", "Pong! Hey, that took... Oh wait, wrong command", "Ask again at a later ti—"].sample
+      exec("bash restart.sh")
+    end
+  else
+    "Sorry, only Cah can update me"
+  end
+end
+
 bot.command(:ping, help_available: false, max_args: 0) do |event|
   m = event.respond('Pinging!')
   m.edit "Pong! Hey, that took #{((Time.now - event.timestamp) * 1000).to_i}ms."
