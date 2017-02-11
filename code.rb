@@ -2,7 +2,7 @@ require 'discordrb'
 require 'configatron'
 require_relative 'config.rb'
 
-bot = Discordrb::Commands::CommandBot.new token: configatron.token, client_id: 249268393817931776, prefix: ['<@249268393817931776>', '^'], ignore_bots: true
+bot = Discordrb::Commands::CommandBot.new token: configatron.token, client_id: 249268393817931776, prefix: ['<@249268393817931776> ', '^'], ignore_bots: true
 
 bot.ready do |event|
   bot.game="Use ^cmds or ^info"
