@@ -40,7 +40,7 @@ bot.command(:restart, help_available: false) do |event|
   else
     "Sorry, only Cah can update me"
   end
-endp
+end
 
 bot.command(:ping, help_available: false, max_args: 0) do |event|
   m = event.respond('Pinging!')
