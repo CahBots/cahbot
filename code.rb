@@ -40,7 +40,7 @@ bot.command(:restart, help_available: false) do |event|
   else
     "Sorry, only Cah can update me"
   end
-end
+endp
 
 bot.command(:ping, help_available: false, max_args: 0) do |event|
   m = event.respond('Pinging!')
@@ -123,7 +123,7 @@ bot.command([:servercount, :servcount], help_available: false, max_args: 0) do |
 end
 
 bot.command(:donate, help_available: false, max_args: 0) do |event|
-  event.respond "Hi #{event.user.name}, click here for donations: https://goo.gl/kF20Xw ~~not a virus i swear~~"
+  event.respond "Donation system is being reworked, sorry"
 end
 
 bot.command(:help, help_available: false, max_args: 0) do |event|
