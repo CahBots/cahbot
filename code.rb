@@ -8,6 +8,14 @@ bot.ready do |event|
   bot.game="Use ^cmds or ^info"
 end
 
+bot.server_create do |event|
+  bot.send_message(281280895577489409, "CahBot just joined #{event.server.name} (ID: #{event.server.id}), owned by #{event.server.owner.distinct} (ID: #{event.server.owner.id}), the server count is now #{bot.servers.count}")
+end
+
+bot.server_delete do |event|
+  bot.send_message(281280895577489409, "CahBot just left #{event.server.name} (ID: #{event.server.id}), the server count is now #{bot.servers.count}")
+end
+
 bot.command(:die, help_available: false) do |event|
   if event.user.id == 228290433057292288
     bot.send_message(event.channel.id, 'CahBot is shutting down')
