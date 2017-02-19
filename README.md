@@ -28,7 +28,7 @@ Any donations are greatly appreciated. However, donations are in no means requir
 
 #### **Want to help make CahBot?** Join [our server](https://goo.gl/02ZRK5) and talk with us!
 
-While we do not guarantee you can help us develop CahBot, if you join the server and begin talking, being active, and even making pull requests on github, you have a high chance of helping us code and shape CahBot.
+While we do not guarantee you can help us develop CahBot, if you join the server and begin talking, being active, and even making pull requests on GitHub, you have a high chance of helping us code and shape CahBot.
 
 #### **Summary**
 
