@@ -22,7 +22,7 @@ Better
  
  Well, it's a pretty easy way to transfer code from my PC to my VPS, that's the only reason. But if you want, you can use some of the code
 
-#### **Want to support CahBot?** You can support CahBot [here](https://patreon.com/CahBot).
+#### **Want to support CahBot?** You can support CahBot [here](https://goo.gl/QBvB7N).
 
 Any donations are greatly appreciated. However, donations are in no means required and merely help the owner be able to maintain and continue working on CahBot.
 
