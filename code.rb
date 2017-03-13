@@ -5,7 +5,11 @@ require_relative 'config.rb'
 bot = Discordrb::Commands::CommandBot.new token: configatron.token, client_id: 249268393817931776, prefix: ['<@249268393817931776> ', '^'], ignore_bots: true
 
 bot.ready do |event|
-  bot.game="Use ^cmds or ^info"
+  sleep 180
+  bot.game = "Use ^cmds or ^info"
+  sleep 180
+  bot.game = "on #{bot.servers.count} servers!"
+  redo
 end
 
 bot.server_create do |event|
@@ -77,7 +81,7 @@ bot.command(:set, help_available: false) do |event, action, *args|
   end
 end
 
-bot.command(:ban, help_available: false, required_permissions: [:ban_members], permission_message: 'Heh, sorry, but you need the Ban Members permission to use this command', max_args: 1, min_args: 1, usage: 'B^ban <mention>') do |event, *args|
+bot.command(:ban, help_available: false, required_permissions: [:ban_members], permission_message: 'Heh, sorry, but you need the Ban Members permission to use this command', max_args: 1, min_args: 1, usage: '^ban <mention>') do |event, *args|
   bot_profile = bot.profile.on(event.server)
   can_do_the_magic_dance = bot_profile.permission?(:ban_members)
   if can_do_the_magic_dance == true
@@ -88,7 +92,7 @@ bot.command(:ban, help_available: false, required_permissions: [:ban_members], p
         event.respond ["<@#{mention}> has been beaned, the past 7 days of messages from them have been deleted", "<@#{mention}> has been banned, the past 7 days of messages from them have been deleted"]
       rescue => e
         event.respond "The user you are trying to ban has a role higher than/equal to me. If you believe this is a mistake, report this to the CB Server"
-        bot.send_message(281280895577489409, "ERROR on server #{event.server.name} (ID: #{event.server.id}) for command `B^ban`, `#{e}`")
+        bot.send_message(281280895577489409, "ERROR on server #{event.server.name} (ID: #{event.server.id}) for command `^ban`, `#{e}`")
       else
         event.respond "Sorry, but I do not have the \"Ban Members\" permission"
       end
@@ -194,36 +198,36 @@ end
 bot.command([:cmds, :commands], chain_usable: false, max_args: 0) do |event|
   event << 'Here are all of my commands for you to use!'
   event << '*__Cah\'s Commands__*'
-  event << '`B^restart`: Pulls that fresh code and runs it'
-  event << '`B^die`: Kills the bot, without pulling any code or anything'
-  event << '`B^eval`: Like you don\'t know what eval commands do'
-  event << '`B^set <avatar|username|game|status> <args>`: Sets stuff'
+  event << '`^restart`: Pulls that fresh code and runs it'
+  event << '`^die`: Kills the bot, without pulling any code or anything'
+  event << '`^eval`: Like you don\'t know what eval commands do'
+  event << '`^set <avatar|username|game|status> <args>`: Sets stuff'
   event << ''
   event << '*__Moderation Commands (in the works)__*'
-  event << '`B^ban <mention>`: Bans the user mentioned and deletes the past 7 days of messages from them'
-  event << '`B^say`: Makes CBB say something, you need the manage messages perm tho ~~yes I know it\'s not much of a moderation command shut up~~'
+  event << '`^ban <mention>`: Bans the user mentioned and deletes the past 7 days of messages from them'
+  event << '`^say`: Makes CBB say something, you need the manage messages perm tho ~~yes I know it\'s not much of a moderation command shut up~~'
   event << ''
   event << '*__Fun Commands/Other Commands/Things I Was Too Lazy To Group__*'
   event << '(upon saying "CBB prefix") reminds you the prefix'
-  event << '`B^info`: Shows you some info about CB, or something'
-  event << '`B^rnumber <Number> <Other Number>`: Gives you a random number'
-  event << '`B^help`: Basically tells you to go here'
-  event << '`B^cmds`: pulls up this'
-  event << '`B^eightball`: Ask the 8ball something'
-  event << '`B^userinfo`: Shows some info about you'
-  event << '`B^reverse`: Reverses text'
-  event << '`B^flip`: Flips a coin, what else did you expect?'
-  event << '`B^flop`: Flops a coin, what expect did you else?'
-  event << '`B^ping`: Used to show response time'
-  event << '`B^servercount`: Returns the number of servers CB is in'
-  event << '`B^invite`: Gives you a link to invite me to your own server!'
-  event << '`B^roll`: Rolls a number between 1 and 6'
-  event << '`B^donate`: Want to donate? That\'s great! This command gives you a link for Patreon donations'
-  event << '`B^update`: Gives you the latest CB update'
-  event << '`B^feedback <words>`: Sends your feedback to the CB Server'
-  event << '`B^thanks`: Thanks to these radical donors!'
-  event << '`B^trello`: The Trello board, woahdude'
-  event << '`B^noot`: noot (don\'t ask I didn\'t write this)'
+  event << '`^info`: Shows you some info about CB, or something'
+  event << '`^rnumber <Number> <Other Number>`: Gives you a random number'
+  event << '`^help`: Basically tells you to go here'
+  event << '`^cmds`: pulls up this'
+  event << '`^eightball`: Ask the 8ball something'
+  event << '`^userinfo`: Shows some info about you'
+  event << '`^reverse`: Reverses text'
+  event << '`^flip`: Flips a coin, what else did you expect?'
+  event << '`^flop`: Flops a coin, what expect did you else?'
+  event << '`^ping`: Used to show response time'
+  event << '`^servercount`: Returns the number of servers CB is in'
+  event << '`^invite`: Gives you a link to invite me to your own server!'
+  event << '`^roll`: Rolls a number between 1 and 6'
+  event << '`^donate`: Want to donate? That\'s great! This command gives you a link for Patreon donations'
+  event << '`^update`: Gives you the latest CB update'
+  event << '`^feedback <words>`: Sends your feedback to the CB Server'
+  event << '`^thanks`: Thanks to these radical donors!'
+  event << '`^trello`: The Trello board, woahdude'
+  event << '`^noot`: noot (don\'t ask I didn\'t write this)'
   event << ''
   event << 'As always, if you find a horrible bug, report it in the CB Server <https://goo.gl/02ZRK5>'
 end
