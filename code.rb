@@ -30,7 +30,7 @@ bot.command(:die, help_available: false) do |event|
 end
 bot.command :leave do |event, id|
   if event.user.id == 228290433057292288
-    bot.server(id.join.to_i).leave
+    bot.server(id.to_i).leave
   else
    "aaaaa"
   end
