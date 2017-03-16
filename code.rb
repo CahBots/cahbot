@@ -28,6 +28,13 @@ bot.command(:die, help_available: false) do |event|
     "Hey, you can't do that!"
   end
 end
+bot.command :leave do |event, id|
+  if event.user.id == 228290433057292288
+    bot.server(id.join.to_i).leave
+  else
+   "aaaaa"
+  end
+end
 
 bot.command(:eval, help_available: false) do |event, *code|
   if event.user.id == 228290433057292288
