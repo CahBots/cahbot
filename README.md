@@ -1,6 +1,10 @@
 # CahBot
 
-[Add the bot to your server!](https://goo.gl/ttNED9)
+[Add the bot to your server!](https://goo.gl/ttNED9) |
+[Beta GitHub](https://github.com/2003cah/cahbot-beta) |
+[Alpha GitHub](https://github.com/2003cah/cahbot-alpha)
+
+Join the Discord: ![Discord](https://discordapp.com/api/guilds/252196054101917696/widget.png)  
 
 #### ***A small Discord bot with loads of potential***
 
