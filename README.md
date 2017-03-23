@@ -12,24 +12,23 @@ Wait, no, that's bad to say
 
 Hold on...
 
-#### **CahBot:** A bot that kinda sucks but is being worked on every day
+#### **CahBot:** A bot that kinda sucks but is being worked on almost every day
 
 Better
 
-#### You can view the commands [here](http://cahbot.pro/commands).
- 
-#### **Why is this repo here, you may ask?**
- 
- Well, it's a pretty easy way to transfer code from my PC to my VPS, that's the only reason. But if you want, you can use some of the code
+#### You can view the commands [here](http://cahbot.pro/commands) (Outdated, you have been warned).
+
+#### **Want to host CahBot?**
+Hosting instructions/steps will come soon:tm:
 
 #### **Want to support CahBot?** You can support CahBot [here](https://goo.gl/QBvB7N).
 
-Any donations are greatly appreciated. However, donations are in no means required and merely help the owner be able to maintain and continue working on CahBot.
+Any and all donations are super-duper-sdooder appreciated, but aren't neccessarily required. All they do is help me continue working on this semismall project :smiley:
 
-#### **Want to help make CahBot?** Join [our server](https://goo.gl/02ZRK5) and talk with us!
+#### **Want to help make CahBot?** Join [our Discord server](https://goo.gl/02ZRK5) and talk with us!
 
-While we do not guarantee you can help us develop CahBot, if you join the server and begin talking, being active, and even making pull requests on GitHub, you have a high chance of helping us code and shape CahBot.
+While I can't guarantee you a spot on the CB Team right away, if you help out by doing PRs, helping out in the CB Server, or etc., it'll increase the chance of that happening.
 
 #### **Summary**
 
-Well, we hope you enjoy CahBot and think about joining the server and using him on yours. CahBot will become a multi-purpose bot with many features in the future created by Cah and his team of developers, so we hope you choose to join in to help us achieve that goal.
+Well, I hope you enjoy this little project of mine, and consider being part of the community. I hope to make this a multi-purpose bot with many different commands/functions in the future, and I hope you'll be here for the ride.
