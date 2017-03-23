@@ -23,7 +23,7 @@ Hosting instructions/steps will come soon:tm:
 
 #### **Want to support CahBot?** You can support CahBot [here](https://goo.gl/QBvB7N).
 
-Any and all donations are super-duper-sdooder appreciated, but aren't neccessarily required. All they do is help me continue working on this semismall project :smiley:
+Any and all donations are super-duper-sdooder appreciated, but aren't neccessarily required. All they do is help me continue working on this semi small project :smiley:
 
 #### **Want to help make CahBot?** Join [our Discord server](https://goo.gl/02ZRK5) and talk with us!
 
