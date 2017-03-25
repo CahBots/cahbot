@@ -22,7 +22,7 @@ Better
 
 #### You can view the commands [here](http://cahbot.pro/commands) (Outdated, you have been warned).
 
-#### **Want to host CahBot?**
+#### **Want to host your own CahBot?**
 Hosting instructions/steps will come soon:tm:
 
 #### **Want to support CahBot?** You can support CahBot [here](https://goo.gl/QBvB7N).
