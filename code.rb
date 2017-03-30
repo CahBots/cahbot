@@ -67,12 +67,12 @@ bot.command(:set, help_available: false) do |event, action, *args|
   if event.user.id == 228290433057292288
     case action
     when 'avatar'
-      open(args.to_s) { |pic| event.bot.profile.avatar = pic }
+      open("#{args.join(' ')}") { |pic| event.bot.profile.avatar = pic }
     when 'username'
-      name = args.to_s
+      name = "#{args.join(' ')}"
       event.respond "Username set to `#{bot.profile.username = name}`"
     when 'game'
-      bot.game = args.to_s
+      bot.game = "#{args.join(' ')}"
       event.respond 'GAME SET!'
     when 'status'
       online = bot.on
