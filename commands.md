@@ -6,6 +6,7 @@ title: CahBot Commands
 ## Command List
 
 ### Owner Commands
+
 Command | Description
 -------|-------
 `^restart` | Pulls that fresh code and runs it.
@@ -14,12 +15,14 @@ Command | Description
 `^set (avatar|username|game|status) (args)` | Sets stuff
 
 ### Moderation Commands (in the works)
+
 Command | Description
 -------|-------
 `^ban (mention)` | Bans the mentioned user and deletes 7 days worth of message history.
 `^say` | Makes the bot say something, the invoking user (and bot). Require the manage message permission.
 
 ### Fun/Misc Commands
+
 Command | Description
 -------|-------
 `^info` | Shows you some info about CB, or something
