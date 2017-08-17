@@ -1,5 +1,6 @@
 ---
 layout: main
+title: Welcome to the CahBot website, where you can learn about CahBot or something
 ---
 
 ### What *IS* CahBot, anyway?
