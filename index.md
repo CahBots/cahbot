@@ -2,8 +2,6 @@
 layout: main
 ---
 
-## Welcome to the CahBot website, where you can learn about CahBot or something
-
 ### What *IS* CahBot, anyway?
 
 CahBot is a small little Discord bot project me and a few buddies are making that will have a bundle of useful features and fun stuff in the future.
