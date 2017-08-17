@@ -172,7 +172,7 @@ bot.command(:userinfo, help_available: false, max_args: 0) do |event|
   event << "**Username:** `#{event.user.name}`"
   event << "**True or False: Are You A Bot?** `#{event.user.current_bot?}`"
   event << "**User Nickname** `#{event.user.nick}`"
-  event << "**User Avatar:** https://discordapp.com/api/v6/users/#{event.user.id}/avatars/#{event.user.avatar_id}.jpg"
+  event << "**User Avatar:** https://cdn.discordapp.com/avatars/#{event.user.id}/#{event.user.avatar_id}.webp?size=1024"
 end
 
 bot.command(:thanks, help_available: false, max_args: 0) do |event|
