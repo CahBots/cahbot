@@ -20,7 +20,7 @@ Hold on...
 
 Better
 
-#### You can view the commands [here](http://cahbot.pro/commands) (Outdated, you have been warned).
+#### You can view the commands [here](http://ruby.cahbot.pro/commands) (Can be outdated, you have been warned).
 
 #### **Want to host your own CahBot?**
 Hosting instructions/steps will come soon:tm:
