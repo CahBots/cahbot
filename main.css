@@ -113,17 +113,60 @@ fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.7
 /* 1. Corrects color not being inherited in IE6/7/8/9 2. Corrects text not wrapping in FF3  3. Corrects alignment displayed oddly in IE6/7 */
 legend { border: 0; /* 1 */ padding: 0; white-space: normal; /* 2 */ *margin-left: -7px; /* 3 */ }
 
-/* 1. Corrects font size not being inherited in all browsers 2. Addresses margins set differently in IE6/7, FF3+, S5, Chrome 3. Improves appearance and consistency in all browsers */
-button, input, select, textarea { font-size: 100%; /* 1 */ margin: 0; /* 2 */ vertical-align: baseline; /* 3 */ *vertical-align: middle; /* 3 */ }
+#header nav li.fork {
+float:left;
+margin-left:0;
+}
 
-/* Addresses FF3/4 setting line-height on 'input' using !important in the UA stylesheet */
-button, input { line-height: normal; /* 1 */ }
+#header nav li {
+font-family:OpenSansLight, "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-weight:400;
+list-style:none;
+display:inline;
+color:#FFF;
+line-height:50px;
+text-shadow:0 1px 0 rgba(0,0,0,0.2);
+font-size:14px;
+}
 
-/* 1. Improves usability and consistency of cursor style between image-type 'input' and others 2. Corrects inability to style clickable 'input' types in iOS 3. Removes inner spacing in IE7 without affecting normal text inputs Known issue: inner spacing remains in IE6 */
-button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; /* 1 */ -webkit-appearance: button; /* 2 */ *overflow: visible; /* 3 */ }
+#header nav li a {
+color:#FFF;
+border:1px solid #5d910b;
+background:linear_gradient(#93bd20,#659e10);
+border-radius:10px;
+box-shadow:inset 0 1px 0 rgba(255,255,255,0.3),0px 3px 7px rgba(0,0,0,0.7);
+background-color:#93bd20;
+margin-top:6px;
+margin-right:10px;
+line-height:14px;
+font-size:14px;
+display:inline-block;
+text-align:center;
+padding:10px 12px;
+}
 
-/* Re-set default cursor for disabled elements */
-button[disabled], input[disabled] { cursor: default; }
+#header nav li a:hover {
+background:linear_gradient(#749619,#527f0e);
+background-color:#659e10;
+border:1px solid #527f0e;
+box-shadow:inset 0 1px 1px rgba(0,0,0,0.2),0px 1px 0 transparent;
+}
+
+#header nav li.fork {
+float:left;
+margin-left:0;
+}
+
+#header nav li.downloads {
+float:right;
+margin-left:6px;
+}
+
+#header nav li.title {
+float:right;
+margin-right:10px;
+font-size:11px;
+}
 
 /* 1. Addresses box sizing set to content-box in IE8/9 2. Removes excess padding in IE8/9 3. Removes excess padding in IE7 Known issue: excess padding remains in IE6 */
 input[type="checkbox"], input[type="radio"] { box-sizing: border-box; /* 1 */ padding: 0; /* 2 */ *height: 13px; /* 3 */ *width: 13px; /* 3 */ }
