@@ -1,1 +1,6 @@
 CNAME
+_site/
+.sass-cache/
+.jekyll-metadata
+GEMFILE
+GEMFILE.lock
