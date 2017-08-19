@@ -115,6 +115,10 @@ bot.command(:ping, help_available: false, max_args: 0) do |event|
   m.edit "Pong! Hey, that took #{((Time.now - event.timestamp) * 1000).to_i}ms."
 end
 
+bot.command(:pingnoedit, help_available: false, max_args: 0) do |event|
+  event.respond "Pong! Hey, that took #{((Time.now - event.timestamp) * 1000).to_i}ms."
+end
+
 bot.command([:eightball, :eball, :'8ball'], help_available: false, min_args: 1) do |event|
   event.respond ["Sources say... Yeah", "Sources say... Nah", "Perhaps", "As I see it, yes", "As I see it, no", "If anything, probably", "Not possible", "Ask again at a later time", "Say that again?", "lol idk", "Probably not", "woahdude", "[object Object]", "Undoubtfully so", "I doubt it", "Eh, maybe"].sample
 end
@@ -139,7 +143,7 @@ bot.command(:info, help_available: false, max_args: 0) do |event|
   event << "**What is CahBot?** CB is a small Discord bot with loads of potential."
   event << "**Who made CahBot?** Cah#5153 coded CahBot, with some help from happyzachariah#6121, tons of help from Chew#6216 & others"
   event << "**Why does CahBot exist?** One day I was bored so I made a Discord bot. End of story kthxbai"
-  event << "**Does CahBot have a server or something?** You bet, https://discord.gg/cWmvfmz"
+  event << "**Does CahBot have a server or something?** You bet, https://goo.gl/02ZRK5"
   event << "**u suk a bunnch an u can hardly mak a discord bawt.** Radical, thank you for noticing"
 end
 
