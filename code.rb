@@ -54,7 +54,7 @@ bot.command(:eval, help_available: false) do |event, *code|
 end
 
 bot.command(:restart, help_available: false) do |event|
-  if event.user.id == 228290433057292288
+  if (event.user.id == 228290433057292288 || 348607473546035200)
     begin
       event.respond ['Into the ***fuuuutttttuuuuurrrreeee***', 'Please wait...', 'How about n—', 'Can do :thumbsup::skin-tone-1:', 'Pong! Hey, that took... Oh wait, wrong command', 'Ask again at a later ti—'].sample
       exec('bash restart.sh')
@@ -174,7 +174,9 @@ bot.command(:userinfo, help_available: false, max_args: 0) do |event|
   event << "**User ID:** `#{event.user.id}`"
   event << "**User Discrim:** `#{event.user.discrim}`"
   event << "**Username:** `#{event.user.name}`"
-  event << "**User Nickname:** `#{event.user.nick} `"
+  if (event.user.nick != nil)
+    event << "**User Nickname:** `#{event.user.nick} `"
+  end
   event << "**User Game:** `#{event.user.game} `"
   event << "**User Avatar:** https://cdn.discordapp.com/avatars/#{event.user.id}/#{event.user.avatar_id}.webp?size=1024"
 end
