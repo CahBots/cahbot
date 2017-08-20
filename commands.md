@@ -39,9 +39,7 @@ Command | Description
 `^invite` | Gives you a link to invite the bot to your server
 `^roll` | Rolls a 6-sided die.
 `^donate` | Donate to CahBot!
-`^update` | Gives a sort-of accurate update list to CahBot.
 `^feedback` | Sends feedback to CB Server.
-`^thanks` | Shows a list of donators.
 `^trello` | The Trello Board.
 `^noot` | I didnt make it dont ask me, probably a meme.
 
