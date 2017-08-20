@@ -174,14 +174,13 @@ bot.command(:userinfo, help_available: false, max_args: 0) do |event|
   event << "**User ID:** `#{event.user.id}`"
   event << "**User Discrim:** `#{event.user.discrim}`"
   event << "**Username:** `#{event.user.name}`"
-  event << "**True or False: Are You A Bot?** `#{event.user.current_bot?}`"
   event << "**User Nickname** `#{event.user.nick}`"
   event << "**User Avatar:** https://cdn.discordapp.com/avatars/#{event.user.id}/#{event.user.avatar_id}.webp?size=1024"
 end
 
 bot.command(:thanks, help_available: false, max_args: 0) do |event|
   event << "Thanks so much to these current Donors:"
-  event << "ChewLeKitten#6216 - Cool Donor, Contributor, and an ultra-rad person"
+  event << "Chew#6216 - Cool Donor, Contributor, and an ultra-rad person"
 end
 
 bot.command(:update, help_available: false, max_args: 0) do |event|
