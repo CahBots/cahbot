@@ -174,7 +174,8 @@ bot.command(:userinfo, help_available: false, max_args: 0) do |event|
   event << "**User ID:** `#{event.user.id}`"
   event << "**User Discrim:** `#{event.user.discrim}`"
   event << "**Username:** `#{event.user.name}`"
-  event << "**User Nickname** `#{event.user.nick}`"
+  event << "**User Nickname:** `#{event.user.nick}`"
+  event << "**User Game:** `#{event.user.game}`"
   event << "**User Avatar:** https://cdn.discordapp.com/avatars/#{event.user.id}/#{event.user.avatar_id}.webp?size=1024"
 end
 
