@@ -175,11 +175,6 @@ bot.command(:userinfo, help_available: false, max_args: 0) do |event|
   event << "**User Avatar:** https://discordapp.com/api/v6/users/#{event.user.id}/avatars/#{event.user.avatar_id}.jpg"
 end
 
-bot.command(:thanks, help_available: false, max_args: 0) do |event|
-  event << "Thanks so much to these current Donors:"
-  event << "ChewLeKitten#6216 - Cool Donor, Contributor, and an ultra-rad person"
-end
-
 bot.command(:update, help_available: false, max_args: 0) do |event|
   event << '**Latest CahBot Update**'
   event << ''
