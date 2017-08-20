@@ -168,7 +168,7 @@ bot.command([:reverse, :rev], help_available: false, min_args: 1) do |event, *ar
   "#{args.join(' ')}".reverse
 end
 
-bot.command(:userinfo, help_available: false, max_args: 0) do |event|
+bot.command([:uinfo, :userinfo, :user, :me], help_available: false, max_args: 0) do |event|
   event << "**__User Info For You__**"
   event << ""
   event << "**User ID:** `#{event.user.id}`"
