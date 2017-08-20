@@ -178,20 +178,6 @@ bot.command(:userinfo, help_available: false, max_args: 0) do |event|
   event << "**User Avatar:** https://cdn.discordapp.com/avatars/#{event.user.id}/#{event.user.avatar_id}.webp?size=1024"
 end
 
-<<<<<<< HEAD
-=======
-bot.command(:thanks, help_available: false, max_args: 0) do |event|
-  event << "Thanks so much to these current Donors:"
-  event << "Chew#6216 - Cool Donor, Contributor, and an ultra-rad person"
-end
-
->>>>>>> af7ea5bde233688fe20366f5db7d5f88fd414677
-bot.command(:update, help_available: false, max_args: 0) do |event|
-  event << '**Latest CahBot Update**'
-  event << ''
-  event << 'What'
-end
-
 bot.command([:servercount, :servcount], help_available: false, max_args: 0) do |event|
   event.respond "CahBot is on **#{bot.servers.count}** servers as of now"
 end
