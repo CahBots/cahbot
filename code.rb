@@ -177,7 +177,9 @@ bot.command(:userinfo, help_available: false, max_args: 0) do |event|
   if (event.user.nick != nil)
     event << "**User Nickname:** `#{event.user.nick} `"
   end
-  event << "**User Game:** `#{event.user.game} `"
+  if (event.user.game != nil)
+    event << "**User Game:** `#{event.user.game} `"
+  end
   event << "**User Avatar:** https://cdn.discordapp.com/avatars/#{event.user.id}/#{event.user.avatar_id}.webp?size=1024"
 end
 
