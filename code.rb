@@ -115,6 +115,10 @@ bot.command(:ping, help_available: false, max_args: 0) do |event|
   m.edit "Pong! Hey, that took #{((Time.now - event.timestamp) * 1000).to_i}ms."
 end
 
+bot.command(:pingnoedit, help_available: false, max_args: 0) do |event|
+  event.respond "Pong! Hey, that took #{((Time.now - event.timestamp) * 1000).to_i}ms."
+end
+
 bot.command([:eightball, :eball, :'8ball'], help_available: false, min_args: 1) do |event|
   event.respond ["Sources say... Yeah", "Sources say... Nah", "Perhaps", "As I see it, yes", "As I see it, no", "If anything, probably", "Not possible", "Ask again at a later time", "Say that again?", "lol idk", "Probably not", "woahdude", "[object Object]", "Undoubtfully so", "I doubt it", "Eh, maybe"].sample
 end
@@ -137,9 +141,9 @@ bot.command(:info, help_available: false, max_args: 0) do |event|
   event << "***Info About CahBot:***"
   event << ""
   event << "**What is CahBot?** CB is a small Discord bot with loads of potential."
-  event << "**Who made CahBot?** Cah#5153 coded CahBot, with some help from happyzachariah#6121, tons of help from ChewLeKitten#6216 & others"
+  event << "**Who made CahBot?** Cah#5153 coded CahBot, with some help from happyzachariah#6121, tons of help from Chew#6216 & others"
   event << "**Why does CahBot exist?** One day I was bored so I made a Discord bot. End of story kthxbai"
-  event << "**Does CahBot have a server or something?** You bet, https://goo.gl/02ZRK5"
+  event << "**Does CahBot have a server or something?** You bet, https://discord.gg/cWmvfmz"
   event << "**u suk a bunnch an u can hardly mak a discord bawt.** Radical, thank you for noticing"
 end
 
@@ -170,11 +174,18 @@ bot.command(:userinfo, help_available: false, max_args: 0) do |event|
   event << "**User ID:** `#{event.user.id}`"
   event << "**User Discrim:** `#{event.user.discrim}`"
   event << "**Username:** `#{event.user.name}`"
-  event << "**True or False: Are You A Bot?** `#{event.user.current_bot?}`"
   event << "**User Nickname** `#{event.user.nick}`"
-  event << "**User Avatar:** https://discordapp.com/api/v6/users/#{event.user.id}/avatars/#{event.user.avatar_id}.jpg"
+  event << "**User Avatar:** https://cdn.discordapp.com/avatars/#{event.user.id}/#{event.user.avatar_id}.webp?size=1024"
 end
 
+<<<<<<< HEAD
+=======
+bot.command(:thanks, help_available: false, max_args: 0) do |event|
+  event << "Thanks so much to these current Donors:"
+  event << "Chew#6216 - Cool Donor, Contributor, and an ultra-rad person"
+end
+
+>>>>>>> af7ea5bde233688fe20366f5db7d5f88fd414677
 bot.command(:update, help_available: false, max_args: 0) do |event|
   event << '**Latest CahBot Update**'
   event << ''
@@ -232,7 +243,7 @@ bot.command([:cmds, :commands], chain_usable: false, max_args: 0) do |event|
   event << '`^trello`: The Trello board, woahdude'
   event << '`^noot`: noot (don\'t ask I didn\'t write this)'
   event << ''
-  event << 'As always, if you find a horrible bug, report it in the CB Server <https://goo.gl/02ZRK5>'
+  event << 'As always, if you find a horrible bug, report it in the CB Server <https://discord.gg/cWmvfmz>'
 end
 
 

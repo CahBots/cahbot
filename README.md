@@ -1,8 +1,8 @@
 # CahBot
 
 [Add the bot to your server!](https://goo.gl/ttNED9) |
-[Beta GitHub](https://github.com/2003cah/cahbot-beta) |
-[Alpha GitHub](https://github.com/2003cah/cahbot-alpha)
+[Beta GitHub](https://github.com/Cahbots/cahbot-beta) |
+[Alpha GitHub](https://github.com/cahbots/cahbot-alpha)
 
 Join the Discord: ![Discord](https://discordapp.com/api/guilds/252196054101917696/widget.png)  
 
@@ -20,7 +20,7 @@ Hold on...
 
 Better
 
-#### You can view the commands [here](http://cahbot.pro/commands) (Outdated, you have been warned).
+#### You can view the commands [here](http://ruby.cahbot.pro/commands) (Can be outdated, you have been warned).
 
 #### **Want to host your own CahBot?**
 Hosting instructions/steps will come soon:tm:
