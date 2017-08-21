@@ -8,7 +8,7 @@ title: Welcome to the CahBot website, where you can learn about CahBot or someth
 CahBot is a small little Discord bot project me and a few buddies are making that will have a bundle of useful features and fun stuff in the future.
 
 ### How long did it take to make this?
-Considering that he’s still being worked on, an infinite amount of time?<
+Considering that he’s still being worked on, an infinite amount of time?
 
 ### Is there a license for using code from the bot?
 No, not yet.
