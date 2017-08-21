@@ -197,7 +197,7 @@ bot.command(:help, help_available: false, max_args: 0) do |event|
 end
 
 bot.command(:noot, help_available: false, max_args: 0) do |event|
-  event.respond "NOOT https://s-media-cache-ak0.pinimg.com/originals/fe/cb/80/fecb80585eca20163a4d57fa281610b8.gif"
+  event.respond "**NOOT** http://cahbot.pro/noot.gif"
 end
 
 bot.command([:cmds, :commands], chain_usable: false, max_args: 0) do |event|
