@@ -6,6 +6,8 @@
 
 Join the Discord: ![Discord](https://discordapp.com/api/guilds/252196054101917696/widget.png)  
 
+## You can view the commands [here](http://ruby.cahbot.pro/commands) (Can be outdated, you have been warned).
+
 #### ***A small Discord bot with loads of potential***
 
 Heyo, this is CahBot, a small Discord bot with- wait, I'm repeating myself here. Uhh...
@@ -19,8 +21,6 @@ Hold on...
 #### **CahBot:** A bot that kinda sucks but is being worked on almost every day
 
 Better
-
-#### You can view the commands [here](http://ruby.cahbot.pro/commands) (Can be outdated, you have been warned).
 
 #### **Want to host your own CahBot?**
 Hosting instructions/steps will come soon:tm:
