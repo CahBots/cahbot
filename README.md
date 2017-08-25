@@ -6,7 +6,7 @@
 
 Join the Discord: ![Discord](https://discordapp.com/api/guilds/252196054101917696/widget.png)  
 
-## You can view the commands [here](http://ruby.cahbot.pro/commands) (Can be outdated, you have been warned).
+### You can view the commands [here](http://ruby.cahbot.pro/commands) (Can be outdated, you have been warned).
 
 #### ***A small Discord bot with loads of potential***
 
