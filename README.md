@@ -23,7 +23,8 @@ Hold on...
 Better
 
 #### **Want to host your own CahBot?**
-Hosting instructions/steps will come soon:tm:
+
+Sure thing! Head on to the amazing website and head to the [install guide](http://ruby.cahbot.pro).
 
 #### **Want to support CahBot?** You can support CahBot [here](https://goo.gl/QBvB7N).
 
