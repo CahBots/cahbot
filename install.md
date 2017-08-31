@@ -19,7 +19,7 @@ Requirements: Git, Ruby (duh) and Bundler Gem. I'm not sure how you install eith
 
 5) Rename the config to config.rb
 
-6) `ruby code.rb`
+6) `bundle exec ruby code.rb`
 
 Or if you like that copy-paste thing:
 
@@ -32,7 +32,7 @@ bundle install
 (get the token and stuff)
 
 ```
-ruby code.rb
+bundle exec ruby code.rb
 ```
 
 ## Updating CahBot
