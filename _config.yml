@@ -1,7 +1,13 @@
 ---
-title: CahBot Discord Bot
-repotitle: CahBot
+# Title The Pages
+title:       CahBot Discord Bot
+# The name of the repository
+repotitle:   CahBot
+# Description
 description: A Discord bot that’s kinda cool that’s being updated frequently, written in Ruby
-author: The CB Team
-authorurl: http://github.com/Cahbots
-url: http://ruby.cahbot.pro
+# Author
+author:      The CB Team
+# Author URL
+authorurl:   http://github.com/Cahbots
+# URL to the page. Usually https://orgname.github.io (put whatever's in the CNAME otherwise)
+url:         http://ruby.cahbot.pro
