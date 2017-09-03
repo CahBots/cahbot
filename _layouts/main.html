@@ -1,63 +1,39 @@
-
 <!doctype html>
 <html>
-  <head>
-  <html prefix="og: http://ogp.me/ns#">
-    <link rel="icon" href="https://discordapp.com/api/users/249268393817931776/avatars/f51076b775becf74a4d2dd8635f835ea.jpg" sizes="16x16" type="image/png">
-    <meta name="google-site-verification" content="qIqg1j32zfiidc_ZLPkRp_95xzbnci-1RsC_emCsQ8s" />
-    <meta name="description" content="{{ site.title }} Website" >
-    <meta property="og:title" content="{{ site.title }}" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="{{ site.url }}" />
-    <meta property="og:image" content="https://discordapp.com/api/users/249268393817931776/avatars/f51076b775becf74a4d2dd8635f835ea.jpg" />
-    <meta property="og:description" content="{{ site.title }}" />
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:site_name" content="{{ site.author }}" />
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>{{ site.title }}</title>
-    <link rel="stylesheet" href="{{ site.url }}/main.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <!--<script src="http://cahbot.pro/assets/js/respond.js"></script>-->
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="/assets/css/ie.css">
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-  </head>
-  <body>
-      <div id="header">
-        <nav>
-          <li class="fork"><a href="{{ site.url }}">⌂</a></li>
-          <li class="fork"><a href="https://github.com/cahbots/cahbot">GitHub</a></li>
-          <li class="fork"><a href="http://invite.cahbot.pro">Invite CahBot</a></li>
-          <li class="fork"><a href="http://discord.cahbot.pro">Join our Server</a></li>
-          <li class="fork"><a href="commands">Commands</a></li>
-          <li class="fork"><a href="install">Install</a></li>
-          <li class="fork"><a href="http://cahbot.pro">CB Hub</a></li>
-        </nav>
-      </div><!-- end header -->
+{% include head.html %}
 
-    <div class="wrapper">
+<body>
+  <div id="header">
+    <nav>
+      <li class="fork"><a href="{{ site.url }}">⌂</a></li>
+      <li class="fork"><a href="https://github.com/cahbots/cahbot">GitHub</a></li>
+      <li class="fork"><a href="http://invite.cahbot.pro">Invite CahBot</a></li>
+      <li class="fork"><a href="http://discord.cahbot.pro">Join our Server</a></li>
+      <li class="fork"><a href="commands">Commands</a></li>
+      <li class="fork"><a href="install">Install</a></li>
+      <li class="fork"><a href="http://cahbot.pro">CB Hub</a></li>
+    </nav>
+  </div>
+  <!-- end header -->
 
-      <section>
-        <div id="title">
-          <h1>{{ site.repotitle }}</h1>
-          <p>{{ site.description }}</p>
-<hr>
-          <span class="credits left">Project maintained by <a href="{{ site.authorurl }}">{{ site.author }}</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
-        </div>
+  <div class="wrapper">
 
-      <h1 id="cahbot">{{ page.title }}</h1>
-{{ content }}
+    <section>
+      <div id="title">
+        <h1>{{ site.repotitle }}</h1>
+        <p>{{ site.description }}</p>
+        <hr>
+        <span class="credits left">Project maintained by <a href="{{ site.authorurl }}">{{ site.author }}</a></span>
+        <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+      </div>
 
-      </section>
+      <h1 id="cahbot">{{ page.title }}</h1> {{ content }}
 
-    </div>
+    </section>
 
-  </body>
+  </div>
+
+</body>
+
 </html>
