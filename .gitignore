@@ -1,2 +1,4 @@
 config.rb
 Gemfile.lock
+.yardoc/
+doc/
