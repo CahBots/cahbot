@@ -156,7 +156,7 @@ bot.command(:rnumber, help_available: false, min_args: 2, max_args: 2) do |event
 end
 
 bot.command(:invite, help_available: false, max_args: 0) do |event|
-  event.respond "To invite me to your server, head over here: https://goo.gl/ttNED9"
+  event.respond "To invite me to your server, head over here: <https://goo.gl/ttNED9>"
 end
 
 bot.command(:say, help_available: false, required_permissions: [:manage_messages], min_args: 1) do |_event, *args|
