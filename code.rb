@@ -232,7 +232,7 @@ bot.command([:cmds, :commands], chain_usable: false, max_args: 0) do |event|
   event << '`^trello`: The Trello board, woahdude'
   event << '`^noot`: noot (don\'t ask I didn\'t write this)'
   event << ''
-  event << 'As always, if you find a horrible bug, report it in the CB Server <https://discord.gg/cWmvfmz>'
+  event << 'As always, if you find a horrible bug, report it in the CB Server <https://goo.gl/02ZRK5>'
 end
 
 
