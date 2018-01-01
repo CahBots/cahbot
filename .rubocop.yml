@@ -1,0 +1,23 @@
+AllCops:
+  DisplayCopNames: true
+
+Style/NumericLiterals:
+  Enabled: false
+
+Metrics/LineLength:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
+
+Security/Eval:
+  Enabled: false
+
+Lint/RescueWithoutErrorClass:
+  Enabled: false
+
+Lint/UselessAssignment:
+  Enabled: false
+
+Style/GuardClause:
+  Enabled: false
