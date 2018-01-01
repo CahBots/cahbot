@@ -21,3 +21,6 @@ Lint/UselessAssignment:
 
 Style/GuardClause:
   Enabled: false
+
+Style/Documentation:
+  Enabled: false
