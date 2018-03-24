@@ -13,7 +13,7 @@ Dir["#{File.dirname(__FILE__)}/modules/*.rb"].each do |wow|
   command.delete!("\n")
   command = Object.const_get(command)
   Bot.include! command
-  puts "Module #{mod} successfully loaded!"
+  puts "Module #{command} successfully loaded!"
 end
 
 Bot.ready do |_event|
