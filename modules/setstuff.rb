@@ -8,16 +8,16 @@ module SetStuff
         open(args.join(' ').to_s) { |pic| event.bot.profile.avatar = pic }
       when 'username'
         name = args.join(' ').to_s
-        event.respond "Username set to `#{bot.profile.username = name}`"
+        event.respond "Username set to `#{Bot.profile.username = name}`"
       when 'game'
-        bot.game = args.join(' ').to_s
+        Bot.game = args.join(' ').to_s
         event.respond 'GAME SET!'
       when 'status'
-        online = bot.on
-        idle = bot.idle
-        invis = bot.invisible
-        dnd = bot.dnd
-        args.join!
+        online = Bot.on
+        idle = Bot.idle
+        invis = Bot.invisible
+        dnd = Bot.dnd
+        args.join(' ')!
         'Status Changed!'
       else
         'I don\'t know what to do!'
