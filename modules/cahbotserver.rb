@@ -12,7 +12,7 @@ module CahBotServer
         event.user.add_role(to_add)
         event.message.delete
         m = event.respond 'Nice, subscribed successfully!'
-        bot.channel(252_260_490_028_384_258).send_embed do |e|
+        Bot.channel(252_260_490_028_384_258).send_embed do |e|
           e.title = '**New Subscriber**'
           e.color = 555_555
           e.timestamp = Time.now
