@@ -17,7 +17,7 @@ module SetStuff
         idle = Bot.idle
         invis = Bot.invisible
         dnd = Bot.dnd
-        args.join(' ')!
+        args.join!(' ')
         'Status Changed!'
       else
         'I don\'t know what to do!'
