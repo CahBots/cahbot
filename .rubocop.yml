@@ -13,7 +13,7 @@ Metrics/BlockLength:
 Security/Eval:
   Enabled: false
 
-Lint/RescueWithoutErrorClass:
+Style/RescueStandardError:
   Enabled: false
 
 Lint/UselessAssignment:
