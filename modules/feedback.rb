@@ -4,7 +4,6 @@ module Feedback
   command(:feedback, min_args: 1) do |event, *args|
     if event.channel.pm? == true
       Bot.send_message(252_239_053_712_392_192, "New Feedback from `#{event.user.name}`\##{event.user.discriminator}. ID: #{event.user.id}. From the land of CahBot's pms.\n\n*#{args.join(' ')}*")
-      event.send_temporary_message('Radical! Feedback sent.', 5)
     else
       begin
         event.message.delete
@@ -12,7 +11,7 @@ module Feedback
         puts 'Unable to delete feedback message, failing silently.'
       end
       Bot.send_message(252_239_053_712_392_192, "New Feedback from `#{event.user.name}`\##{event.user.discriminator}. ID: #{event.user.id}. From the land of `#{event.server.name}` (Server ID: #{event.server.id}).\n\n*#{args.join(' ')}*")
-      event.send_temporary_message('Radical! Feedback sent.', 5)
     end
+    event.send_temporary_message('Radical! Feedback sent.', 5)
   end
 end

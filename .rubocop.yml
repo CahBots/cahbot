@@ -24,3 +24,6 @@ Style/GuardClause:
 
 Style/Documentation:
   Enabled: false
+
+Security/Open:
+  Enabled: false
