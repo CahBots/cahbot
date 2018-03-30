@@ -16,7 +16,7 @@ Dir["#{File.dirname(__FILE__)}/modules/*.rb"].each do |wow|
   puts "Module #{command} successfully loaded!"
 end
 
-Bot.ready do |_event|
+Bot.ready do |event|
   sleep 180
   Bot.game = 'Use ^cmds or ^info'
   sleep 180
