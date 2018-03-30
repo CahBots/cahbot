@@ -20,7 +20,7 @@ Bot.ready do |_event|
   sleep 180
   Bot.game = 'Use ^cmds or ^info'
   sleep 180
-  Bot.game = "on #{bot.servers.count} servers!"
+  Bot.game = "on #{event.bot.servers.count} servers!"
   redo
 end
 
